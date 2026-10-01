@@ -35,6 +35,7 @@ export const DICT = {
     doa_title:'Al-Mathurat & Doa', morning:'Pagi', evening:'Petang', dua_collection:'Koleksi Doa',
     tap_to_count:'Ketik untuk kira', completed:'Selesai',
     tools_title:'Alat & Tetapan',
+    mod_baca:'Baca', mod_terjemahan:'Terjemahan',
     t_help:'Panduan', t_help_p:'Cara guna setiap ciri',
     t_ilmu:'Ilmu', t_ilmu_p:'Tafsir, tajwid & qiraat',
     help_title:'Panduan Pengguna', help_sub:'Semua yang perlu anda tahu untuk guna aplikasi ini.',
@@ -93,6 +94,7 @@ export const DICT = {
     doa_title:'Al-Mathurat & Duas', morning:'Morning', evening:'Evening', dua_collection:'Dua Collection',
     tap_to_count:'Tap to count', completed:'Completed',
     tools_title:'Tools & Settings',
+    mod_baca:'Read', mod_terjemahan:'Translation',
     t_help:'Guide', t_help_p:'How to use every feature',
     t_ilmu:'Knowledge', t_ilmu_p:'Tafsir, tajwid & qiraat',
     help_title:'User Guide', help_sub:'Everything you need to use this app.',
@@ -148,6 +150,7 @@ const DEFAULTS = () => ({
   bookmarks: [],          // ['1:1', ...]
   lastRead: null,         // {surah, ayat}
   iqra: {},               // {cellKey: true}
+  quranMod: 'terjemahan', // 'baca' | 'terjemahan' — lalai kekal kelakuan semasa
   mathurat: {},           // 'YYYY-MM-DD': {itemId: count}
   nisab: 23850
 });

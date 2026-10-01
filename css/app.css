@@ -483,3 +483,31 @@ svg.ic{width:1.25rem;height:1.25rem;fill:none;stroke:currentColor;stroke-width:2
   .reveal{opacity:1;transform:none}
   .skel{animation:none}
 }
+
+/* ---------- Toggle mod bacaan Quran (baca / terjemahan) ---------- */
+.quran-mod{
+  display:inline-flex;gap:2px;padding:2px;
+  background:var(--chip-bg);
+  border:1px solid var(--hairline);
+  border-radius:999px;
+}
+.quran-mod button{
+  display:grid;place-items:center;
+  width:2rem;height:2rem;
+  border-radius:999px;
+  background:transparent;
+  color:var(--muted);
+  transition:background .18s var(--ease),color .18s var(--ease);
+}
+.quran-mod button.on{
+  background:var(--surface);
+  color:var(--text);
+  box-shadow:0 1px 2px rgba(0,0,0,.06);
+}
+.dark .quran-mod button.on{
+  background:var(--chip-bg);
+}
+.quran-mod .ic{width:1.05rem;height:1.05rem}
+
+/* Pil MY/EN kekal dalam DOM tetapi disembunyikan bila baca mode */
+.quran-lang[hidden]{display:none !important}

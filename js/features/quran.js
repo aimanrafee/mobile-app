@@ -108,14 +108,16 @@ export function renderSurah(params) {
     </div>` : `<p class="muted" style="text-align:center">${esc(tr('loading'))}</p>`}`;
   }
   const lang = store.state.lang;
+  const mod = store.state.quranMod || 'terjemahan';
+  const modBaca = mod === 'baca';
   const showEn = s.bundled && params.trans === 'en';
   const ayat = s.ayat.map((a, i) => {
     const id = s.n + ':' + (i + 1);
     const bm = store.state.bookmarks.includes(id);
     return `<div class="ayah" id="ayah-${i + 1}">
       <div class="ar" lang="ar">${esc(a.ar)}<span class="num">${i + 1}</span></div>
-      <div class="my">${esc(a.my)}</div>
-      ${showEn && a.en ? `<div class="en" lang="en">${esc(a.en)}</div>` : ''}
+      ${!modBaca ? `<div class="my">${esc(a.my)}</div>` : ''}
+      ${!modBaca && showEn && a.en ? `<div class="en" lang="en">${esc(a.en)}</div>` : ''}
       <div class="ayah-tools">
         <button type="button" class="mini-btn${bm ? ' on' : ''}" data-action="bm:toggle" data-id="${id}">
           <svg class="ic"><use href="#i-bookmark"/></svg>${esc(tr(bm ? 'bookmarked' : 'bookmark'))}</button>
@@ -125,12 +127,22 @@ export function renderSurah(params) {
     </div>`;
   }).join('');
   return `
-  ${s.bundled ? `<div class="quran-top">
+  <div class="quran-top">
+    <div class="quran-mod" role="group" aria-label="${esc(tr('mod_baca'))} / ${esc(tr('mod_terjemahan'))}">
+      <button type="button" class="${modBaca ? 'on' : ''}" data-action="quran:mod" data-mod="baca"
+        aria-pressed="${modBaca}" aria-label="${esc(tr('mod_baca'))}">
+        <svg class="ic" aria-hidden="true"><use href="#i-book"/></svg></button>
+      <button type="button" class="${!modBaca ? 'on' : ''}" data-action="quran:mod" data-mod="terjemahan"
+        aria-pressed="${!modBaca}" aria-label="${esc(tr('mod_terjemahan'))}">
+        <svg class="ic" aria-hidden="true"><use href="#i-globe"/></svg></button>
+    </div>
+  ${s.bundled ? `<div class="quran-lang"${modBaca ? ' hidden aria-hidden="true"' : ''}>
     <div class="pill-toggle" role="group" aria-label="Terjemahan">
       <button type="button" class="${showEn ? '' : 'on'}" data-action="quran:trans" data-trans="my">MY</button>
       <button type="button" class="${showEn ? 'on' : ''}" data-action="quran:trans" data-trans="en">EN</button>
     </div>
   </div>` : ''}
+  </div>
   <div class="mushaf-head">
     <div class="ar" lang="ar">${esc(s.ar)}</div>
     <div class="tr">${esc(locName(s.name))} · ${esc(locName(s.tr))} · ${s.ayat.length} ${lang === 'en' ? 'verses' : 'ayat'}</div>
@@ -142,6 +154,13 @@ export function renderSurah(params) {
 export const quranActions = {
   'surah:open': (el) => { surahError = ''; push('surah', { surah: el.dataset.surah }); },
   'surah:retry': () => { surahError = ''; render(true); },
+  'quran:mod': (el) => {
+    const mod = el.dataset.mod;
+    if (!['baca', 'terjemahan'].includes(mod)) return;
+    if (store.state.quranMod === mod) return;
+    store.update((s) => { s.quranMod = mod; });
+    render(true);
+  },
   'quran:trans': (el) => { view.params.trans = el.dataset.trans; render(true); },
   'bm:toggle': (el) => {
     const id = el.dataset.id;
