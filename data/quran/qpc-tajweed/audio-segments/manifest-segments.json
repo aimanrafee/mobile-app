@@ -1,0 +1,14 @@
+{
+  "recitation_id": 7,
+  "qari": "Mishari Rashid Al-Afasy",
+  "jenis": "murattal",
+  "jumlah_surah": 114,
+  "jumlah_ayat": 6236,
+  "jumlah_segmen": 77371,
+  "segmen_dilangkau_hingar": 21,
+  "saiz_total_kb": 1663,
+  "dijana_pada": "2026-10-01T06:17:02.611Z",
+  "sumber": "https://api.quran.com/api/v4/verses/by_chapter/{N}?words=false&audio=7&per_page=300",
+  "sumber_editor": "https://qul.tarteel.ai/surah_audio_files/7",
+  "audio_cdn": "https://everyayah.com/data/Alafasy_128kbps/{SSS}{AAA}.mp3 (Fasa 4b: strim, bukan muat turun)"
+}

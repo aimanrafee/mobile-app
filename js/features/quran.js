@@ -10,6 +10,7 @@ import { store, emitLog, toast } from '../platform/core.js';
 import { SURAHS, BISMILLAH } from '../data.js';
 import { $, esc, tr, locName } from '../platform/ui.js';
 import { view, push, render } from '../platform/router.js';
+import { renderPagesShell, pagesActions, pagesOnShow } from './quran-pages.js';
 
 /* ---------- metadata & cache ---------- */
 let META = null, metaInflight = null;
@@ -90,6 +91,26 @@ export function surahListHTML(q) {
   }).join('');
 }
 
+/* ---------- toggle mod + placeholder Pages (Fasa 2; render penuh Fasa 3) ---------- */
+export function modToggleHTML() {
+  const mod = store.state.quranMod || 'terjemahan';
+  const btn = (m, icon, key) => {
+    const on = mod === m;
+    return `<button type="button" class="${on ? 'on' : ''}" data-action="quran:mod" data-mod="${m}" aria-pressed="${on}" aria-label="${esc(tr(key))}"><svg class="ic" aria-hidden="true"><use href="#${icon}"/></svg></button>`;
+  };
+  return `<div class="quran-mod" role="group" aria-label="${esc(tr('mod_baca'))} / ${esc(tr('mod_terjemahan'))} / ${esc(tr('mod_pages'))}">${btn('baca', 'i-book', 'mod_baca')}${btn('terjemahan', 'i-globe', 'mod_terjemahan')}${btn('pages', 'i-mod-pages', 'mod_pages')}</div>`;
+}
+
+export function renderPagesPlaceholder(n) {
+  const m = findMeta(Number(n));
+  const nama = m ? locName(m.name) : 'Surah ' + n;
+  return `<div class="quran-top">${modToggleHTML()}</div>
+  <div class="mushaf-head"><div class="tr">${esc(nama)}</div></div>
+  <div class="card form-card" style="text-align:center">
+    <p class="muted">${esc(tr('mod_pages_soon'))}</p>
+  </div>`;
+}
+
 /* ---------- paparan surah ---------- */
 export function renderSurah(params) {
   const n = Number(params.surah);
@@ -110,6 +131,8 @@ export function renderSurah(params) {
   const lang = store.state.lang;
   const mod = store.state.quranMod || 'terjemahan';
   const modBaca = mod === 'baca';
+  const modPages = mod === 'pages';
+  if (modPages) return renderPagesShell(store.state.quranHalaman || 1);
   const showEn = s.bundled && params.trans === 'en';
   const ayat = s.ayat.map((a, i) => {
     const id = s.n + ':' + (i + 1);
@@ -128,14 +151,7 @@ export function renderSurah(params) {
   }).join('');
   return `
   <div class="quran-top">
-    <div class="quran-mod" role="group" aria-label="${esc(tr('mod_baca'))} / ${esc(tr('mod_terjemahan'))}">
-      <button type="button" class="${modBaca ? 'on' : ''}" data-action="quran:mod" data-mod="baca"
-        aria-pressed="${modBaca}" aria-label="${esc(tr('mod_baca'))}">
-        <svg class="ic" aria-hidden="true"><use href="#i-book"/></svg></button>
-      <button type="button" class="${!modBaca ? 'on' : ''}" data-action="quran:mod" data-mod="terjemahan"
-        aria-pressed="${!modBaca}" aria-label="${esc(tr('mod_terjemahan'))}">
-        <svg class="ic" aria-hidden="true"><use href="#i-globe"/></svg></button>
-    </div>
+    ${modToggleHTML()}
   ${s.bundled ? `<div class="quran-lang"${modBaca ? ' hidden aria-hidden="true"' : ''}>
     <div class="pill-toggle" role="group" aria-label="Terjemahan">
       <button type="button" class="${showEn ? '' : 'on'}" data-action="quran:trans" data-trans="my">MY</button>
@@ -152,13 +168,17 @@ export function renderSurah(params) {
 }
 
 export const quranActions = {
+  ...pagesActions,
   'surah:open': (el) => { surahError = ''; push('surah', { surah: el.dataset.surah }); },
   'surah:retry': () => { surahError = ''; render(true); },
   'quran:mod': (el) => {
     const mod = el.dataset.mod;
-    if (!['baca', 'terjemahan'].includes(mod)) return;
+    if (!['baca', 'terjemahan', 'pages'].includes(mod)) return;
     if (store.state.quranMod === mod) return;
-    store.update((s) => { s.quranMod = mod; });
+    store.update((s) => {
+      s.quranMod = mod;
+      if (mod === 'pages' && !s.quranHalaman) s.quranHalaman = 1;
+    });
     render(true);
   },
   'quran:trans': (el) => { view.params.trans = el.dataset.trans; render(true); },

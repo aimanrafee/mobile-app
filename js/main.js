@@ -2,11 +2,13 @@
 import { initApp } from './app.js';
 import { initDebug } from './platform/debug.js';
 import { emitLog } from './platform/core.js';
+import { initPWA } from './pwa.js';
 
 function boot() {
   try {
     initDebug();
     initApp();
+    initPWA();
   } catch (e) {
     emitLog('error', 'Boot gagal: ' + (e && e.message));
     // paparan minimum jika modul gagal

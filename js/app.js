@@ -28,6 +28,7 @@ import { renderHaid, haidActions } from './features/haid.js';
 import { renderSettings, settingsActions } from './features/settings.js';
 import { renderHelp, helpActions } from './features/help.js';
 import { renderIlmu, ilmuActions, ilmuOnShow } from './features/ilmu.js';
+import { pagesOnShow } from './features/quran-pages.js';
 
 /* ---------- daftar skrin (id + judul topbar) ---------- */
 registerScreen('home', renderHome, { title: null });
@@ -66,6 +67,9 @@ registerActions(ilmuActions);
 registerOnShow((v) => v.tab === 'home' && !v.screen, homeOnShow);
 registerOnShow((v) => v.tab === 'quran' && !v.screen, quranOnShow);
 registerOnShow((v) => v.screen === 'surah', quranSurahOnShow);
+registerOnShow((v) => v.screen === 'surah', async () => {
+  if (store.state.quranMod === 'pages') await pagesOnShow();
+});
 registerOnShow((v) => v.screen === 'ilmu', ilmuOnShow);
 
 /* ---------- inisialisasi (kekal API lama: initApp) ---------- */
