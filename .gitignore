@@ -9,3 +9,5 @@ Thumbs.db
 !.env.example
 .vscode/
 .idea/
+# Bahan rujukan luar (bukan sebahagian app — jangan commit)
+Source/

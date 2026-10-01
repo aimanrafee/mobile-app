@@ -15,7 +15,7 @@ import { isDark, applyTheme } from './platform/ui.js';
 import { setDebugEnabled } from './platform/debug.js';
 
 import { renderHome, homeActions, homeOnShow } from './features/home.js';
-import { renderQuran, renderSurah, quranActions, quranOnShow } from './features/quran.js';
+import { renderQuran, renderSurah, quranActions, quranOnShow, quranSurahOnShow } from './features/quran.js';
 import { renderIqra, renderLevel, iqraActions } from './features/iqra.js';
 import { renderDoa, doaActions } from './features/doa.js';
 import { renderMore } from './features/more.js';
@@ -62,6 +62,7 @@ registerActions(helpActions);
 /* ---------- hook selepas render (timer, carian live) ---------- */
 registerOnShow((v) => v.tab === 'home' && !v.screen, homeOnShow);
 registerOnShow((v) => v.tab === 'quran' && !v.screen, quranOnShow);
+registerOnShow((v) => v.screen === 'surah', quranSurahOnShow);
 
 /* ---------- inisialisasi (kekal API lama: initApp) ---------- */
 export function initApp() {

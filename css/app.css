@@ -465,10 +465,21 @@ svg.ic{width:1.25rem;height:1.25rem;fill:none;stroke:currentColor;stroke-width:2
 .dp-sec{color:var(--dp-ink);font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin:.9rem 0 .3rem}
 .dp-sec:first-child{margin-top:0}
 
+/* ---------- 13. Batch B: skeleton muat surah + ralat muat ---------- */
+.skel{
+  height:3.4rem;border-radius:var(--r-md);margin:var(--s2) var(--s4) 0;
+  background:linear-gradient(90deg,var(--chip-bg) 25%,var(--surface) 50%,var(--chip-bg) 75%);
+  background-size:200% 100%;animation:shimmer 1.2s linear infinite;
+}
+@keyframes shimmer{from{background-position:200% 0}to{background-position:-200% 0}}
+.load-err{text-align:center}
+.load-err .btn{margin-top:var(--s2)}
+
 /* ---------- 12. Gerak & akses ---------- */
 .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
 .reveal.in{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}
   .reveal{opacity:1;transform:none}
+  .skel{animation:none}
 }
