@@ -10,6 +10,7 @@ import { store, emitLog, toast } from '../platform/core.js';
 import { SURAHS, BISMILLAH } from '../data.js';
 import { $, esc, tr, locName } from '../platform/ui.js';
 import { view, push, render } from '../platform/router.js';
+import { renderPagesShell, pagesActions, pagesOnShow } from './quran-pages.js';
 
 /* ---------- metadata & cache ---------- */
 let META = null, metaInflight = null;
@@ -91,7 +92,7 @@ export function surahListHTML(q) {
 }
 
 /* ---------- toggle mod + placeholder Pages (Fasa 2; render penuh Fasa 3) ---------- */
-function modToggleHTML() {
+export function modToggleHTML() {
   const mod = store.state.quranMod || 'terjemahan';
   const btn = (m, icon, key) => {
     const on = mod === m;
@@ -131,7 +132,7 @@ export function renderSurah(params) {
   const mod = store.state.quranMod || 'terjemahan';
   const modBaca = mod === 'baca';
   const modPages = mod === 'pages';
-  if (modPages) return renderPagesPlaceholder(n);
+  if (modPages) return renderPagesShell(store.state.quranHalaman || 1);
   const showEn = s.bundled && params.trans === 'en';
   const ayat = s.ayat.map((a, i) => {
     const id = s.n + ':' + (i + 1);
@@ -167,13 +168,17 @@ export function renderSurah(params) {
 }
 
 export const quranActions = {
+  ...pagesActions,
   'surah:open': (el) => { surahError = ''; push('surah', { surah: el.dataset.surah }); },
   'surah:retry': () => { surahError = ''; render(true); },
   'quran:mod': (el) => {
     const mod = el.dataset.mod;
     if (!['baca', 'terjemahan', 'pages'].includes(mod)) return;
     if (store.state.quranMod === mod) return;
-    store.update((s) => { s.quranMod = mod; });
+    store.update((s) => {
+      s.quranMod = mod;
+      if (mod === 'pages' && !s.quranHalaman) s.quranHalaman = 1;
+    });
     render(true);
   },
   'quran:trans': (el) => { view.params.trans = el.dataset.trans; render(true); },

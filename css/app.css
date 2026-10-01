@@ -511,3 +511,74 @@ svg.ic{width:1.25rem;height:1.25rem;fill:none;stroke:currentColor;stroke-width:2
 
 /* Pil MY/EN kekal dalam DOM tetapi disembunyikan bila baca mode */
 .quran-lang[hidden]{display:none !important}
+
+/* ── Mod Pages (Mushaf QPC V4) ─────────────────── */
+.qcf-head{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:.5rem var(--s4);
+  background:var(--chip-bg);
+  border-bottom:1px solid var(--hairline);
+}
+.qcf-info{text-align:center;flex:1;line-height:1.2}
+.qcf-info strong{font-size:.85rem;display:block}
+.qcf-info small{font-size:.66rem;color:var(--muted)}
+.qcf-nav{
+  width:2rem;height:2rem;display:grid;place-items:center;
+  border-radius:50%;background:var(--surface);
+  font-size:1.2rem;color:var(--text);
+}
+.qcf-nav:disabled{opacity:.3}
+
+.qcf-mushaf{
+  padding:var(--s4) var(--s3);
+  font-size:1.55rem;
+  line-height:2.3;
+  text-align:justify;
+  text-align-last:center;
+  word-spacing:-.06em;
+  min-height:60vh;
+}
+.qcf-line{
+  margin-bottom:.1rem;
+}
+.qcf-line.qcf-center{text-align:center;text-align-last:center}
+.qcf-w{ white-space:nowrap; }
+
+.qcf-surah{
+  display:block;
+  text-align:center;
+  color:var(--muted);
+  font-size:.95em;
+  margin:.6rem 0 .4rem;
+  padding:.3rem;
+  border-top:1px solid var(--hairline);
+  border-bottom:1px solid var(--hairline);
+}
+.qcf-bismillah{
+  display:block;
+  text-align:center;
+  color:var(--accent);
+  margin:.4rem 0;
+}
+
+.qcf-loading,
+.qcf-err{
+  text-align:center;
+  color:var(--muted);
+  padding:var(--s5);
+  font-size:.85rem;
+}
+.qcf-err{color:var(--danger, #c0392b)}
+
+.qcf-foot{
+  display:flex;
+  justify-content:center;
+  padding:var(--s3) 0 var(--s5);
+}
+.qcf-jump{
+  padding:.5rem 1rem;
+  border-radius:999px;
+  background:var(--chip-bg);
+  color:var(--text);
+  font-size:.75rem;
+}

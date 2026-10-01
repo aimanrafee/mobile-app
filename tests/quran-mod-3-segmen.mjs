@@ -54,10 +54,10 @@ try {
   ok('toggle 3 segmen', btns === 3, 'dapat=' + btns);
   ok('simbol i-mod-pages dirujuk', hT.includes('#i-mod-pages'));
 
-  // Mod pages → placeholder, toggle masih ada
+  // Mod pages → shell mushaf Fasa 3, toggle masih ada
   core.store.update((s) => { s.quranMod = 'pages'; });
   const hP = quran.renderSurah({ surah: 1 });
-  ok('placeholder mesej + toggle kekal', hP.includes('akan datang') && hP.includes('quran:mod'));
+  ok('placeholder mesej + toggle kekal', hP.includes('Halaman') && hP.includes('quran:mod') && hP.includes('qcf-mushaf'));
   ok('placeholder tiada senarai ayat', !hP.includes('class="ayah"'));
   ok('placeholder .on di Pages', /data-mod="pages"[^>]*aria-pressed="true"/.test(hP));
 
