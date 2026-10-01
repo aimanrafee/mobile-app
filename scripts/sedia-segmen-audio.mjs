@@ -8,7 +8,7 @@
 // Atribusi: QUL Tarteel (CC-BY-4.0) + Quran Foundation API. Kegunaan peribadi.
 // Audio MP3 TIDAK dimuat di sini (distrim dari CDN di Fasa 4b).
 //
-// Jalankan dari folder "mobile app": node scripts/sedia-segmen-audio.mjs [--force] [--dry-run]
+// Jalankan dari folder "mobile app": node scripts/sedia-segmen-audio.mjs [--force] [--dry-run] [--only=N]
 
 import { mkdirSync, writeFileSync, existsSync, readFileSync } from 'node:fs';
 
@@ -23,6 +23,11 @@ const RETRY_MAX = 3;
 const args = new Set(process.argv.slice(2));
 const FORCE = args.has('--force');
 const DRY_RUN = args.has('--dry-run');
+let ONLY = null;
+for (const a of args) {
+  const m = String(a).match(/^--only=(\d{1,3})$/);
+  if (m) ONLY = Math.min(114, Math.max(1, Number(m[1])));
+}
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const pad = (n) => String(n).padStart(3, '0');
@@ -93,7 +98,8 @@ async function muatSurah(no) {
 async function utama() {
   mkdirSync(DIR, { recursive: true });
   let jumlahAyat = 0, jumlahSegmen = 0, saizKB = 0, dimuat = 0, dilangkau = 0;
-  for (let no = 1; no <= 114; no++) {
+  const senarai = ONLY ? [ONLY] : Array.from({ length: 114 }, (_, i) => i + 1);
+  for (const no of senarai) {
     const r = await muatSurah(no);
     if (r.skip) { dilangkau++; }
     else {
@@ -137,7 +143,7 @@ async function utama() {
   };
   if (!DRY_RUN) writeFileSync(`${DIR}/manifest-segments.json`, JSON.stringify(manifest, null, 2));
   console.log(`\nSELESAI: dimuat=${dimuat} dilangkau=${dilangkau} ayat=${jumlahAyat} segmen=${jumlahSegmen} saiz=${saizKB} KB`);
-  if (jumlahAyat !== 6236) {
+  if (!ONLY && jumlahAyat !== 6236) {
     console.error(`AMARAN: jumlah ayat ${jumlahAyat} ≠ 6236`);
     process.exitCode = 1;
   }
