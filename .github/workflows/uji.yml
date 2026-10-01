@@ -1,0 +1,30 @@
+# CI Taubat.App — semak sintaks + jalankan semua ujian automatik
+# Berjalan pada setiap push dan pull request. Gagal jika mana-mana ujian gagal.
+name: uji
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  uji:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Semak sintaks JS + SW
+        run: |
+          for f in $(git ls-files '*.js'); do
+            node --check "$f" || exit 1
+          done
+
+      - name: Jalankan ujian
+        run: |
+          for t in tests/*.mjs; do
+            echo "=== $t"
+            node "$t" || exit 1
+          done
