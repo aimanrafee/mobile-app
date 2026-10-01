@@ -6,7 +6,7 @@
 
 ```powershell
 # Dari folder "mobile app":
-node --check js/app.js; node --check js/router.js; node --check js/ui.js
+node --check js/app.js; node --check js/platform/router.js; node --check js/platform/ui.js
 # + setiap js/features/*.js
 ```
 

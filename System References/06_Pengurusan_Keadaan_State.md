@@ -1,6 +1,6 @@
 # 06 — Pengurusan Keadaan (State)
 
-> Store berpusat dalam `js/core.js:125-179`. Semua ciri baca/tulis melalui `store` — tiada state global lain.
+> Store berpusat dalam `js/platform/core.js:125-179`. Semua ciri baca/tulis melalui `store` — tiada state global lain.
 
 ## 6.1 Bentuk State (`DEFAULTS`)
 

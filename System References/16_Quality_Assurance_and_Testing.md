@@ -6,7 +6,7 @@
 
 ```powershell
 # From the "mobile app" folder:
-node --check js/app.js; node --check js/router.js; node --check js/ui.js
+node --check js/app.js; node --check js/platform/router.js; node --check js/platform/ui.js
 # + each js/features/*.js
 ```
 

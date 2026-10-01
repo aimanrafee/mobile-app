@@ -10,11 +10,12 @@ mobile app/ (repo: taubat-mobile-app)
 ├── js/
 │   ├── main.js                   # Titik masuk: boot initDebug + initApp
 │   ├── app.js                    # WIRING nipis: daftar skrin/tindakan, export initApp
-│   ├── router.js                 # view/go/push/back/render + registry + initShell
-│   ├── ui.js                     # Helpers kongsi: $, esc, tr, kalendar, tema, getar
-│   ├── core.js                   # Store, DICT, waktu solat, Hijri, kiblat, toast
 │   ├── data.js                   # Kandungan statik: surah, Mathurat, doa, Iqra', acara
-│   ├── debug.js                  # Panel pembangun (log/state/info/actions)
+│   ├── platform/                 # LAPISAN PLATFORM (bukan ciri pengguna)
+│   │   ├── core.js               # Store, DICT, waktu solat, Hijri, kiblat, toast
+│   │   ├── ui.js                 # Helpers kongsi: $, esc, tr, kalendar, tema, getar
+│   │   ├── router.js             # view/go/push/back/render + registry + initShell
+│   │   └── debug.js              # Panel pembangun + systemChecks + selftest
 │   └── features/                 # SATU fail = SATU ciri
 │       ├── home.js               # Tracker solat + streak + heatmap + undur
 │       ├── quran.js              # Senarai surah + surah + bookmark
@@ -43,21 +44,21 @@ mobile app/ (repo: taubat-mobile-app)
 - Import render/actions setiap ciri → `registerScreen(id, fn, {title})` → `registerActions(...)` → `registerOnShow(...)` untuk home & quran.
 - `initApp()` = `initShell(...)` + log + `render()`. Re-export `view/go/push/back/render` untuk keserasian (`main.js` import dari sini).
 
-### `js/router.js` — Navigasi + Registry
+### `js/platform/router.js` — Navigasi + Registry
 - `view = {tab, screen, params}`; `go(tab)` (set semula), `push(screen, params)`, `back()`, `render(keepScroll)` (bersih timer → suntik HTML → judul/back/tab aktif → `data-i18n` → onShow hooks → tatal).
 - Registry: `SCREENS`, `ACTIONS` (asas `nav:tab/nav:screen/nav:back` sentiasa tersedia), `ON_SHOW`.
 - `initShell()` pasang pendengar sekali: klik `[data-action]` (delegasi), tabbar, back, tema, bahasa, easter-egg 7 ketukan tajuk → debug.
 
-### `js/ui.js` — Helpers Kongsi
+### `js/platform/ui.js` — Helpers Kongsi
 - DOM/i18n: `$`, `$$`, `esc`, `tr`, `locName`; pemasa: `clearTimers/every`; hari: `dayRecord/dayCount/isExempt/greetKey`; tema: `isDark/applyTheme`; `copyText/vibrate`; `monthGridHTML(params, mode)` kongsi calendar/fast/haid.
 
-### `js/core.js` — Teras Tanpa UI
+### `js/platform/core.js` — Teras Tanpa UI
 - `store` (`taubat_app_v1`), `DICT` (my/en), `prayerTimes` (MWL: Subuh 18°, Isyak 17°), `toHijri` (Intl + sandaran tabular), `qiblaBearing`, `nextPrayer`, `toast`, `emitLog`.
 
 ### `js/data.js` — Kandungan Statik Sahaja
 - `SURAHS` (Juz 'Amma terpilih), `BISMILLAH`, `MATHURAT`, `DUA_CATS/DUAS`, `IQRA_LEVELS`, `ISLAMIC_EVENTS`, `HIJRI_MONTHS`, `QUOTES`. Tiada logik.
 
-### `js/debug.js` — Panel Pembangun
+### `js/platform/debug.js` — Panel Pembangun
 - Pintasan konsol + ralat global → `LOGS` (maks 500); tab Logs/State/Info/Actions; `setDebugEnabled/isDebugEnabled/openDebugPanel/initDebug`.
 
 ## 2.3 Aliran Data dan Kebergantungan

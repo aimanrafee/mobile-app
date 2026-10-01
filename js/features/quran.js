@@ -1,8 +1,8 @@
 /** features/quran.js — Senarai surah + paparan surah + bookmark */
-import { store, emitLog, toast } from '../core.js';
+import { store, emitLog, toast } from '../platform/core.js';
 import { SURAHS, BISMILLAH } from '../data.js';
-import { $, esc, tr, locName } from '../ui.js';
-import { view, push, render } from '../router.js';
+import { $, esc, tr, locName } from '../platform/ui.js';
+import { view, push, render } from '../platform/router.js';
 
 export function renderQuran() {
   const last = store.state.lastRead;

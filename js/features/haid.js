@@ -1,6 +1,6 @@
 /** features/haid.js — Penjejak haid (kongsi grid kalendar + tindakan cal:* dari calendar.js) */
-import { store, emitLog } from '../core.js';
-import { esc, tr, monthGridHTML, dateKey, parseKey, addDays } from '../ui.js';
+import { store, emitLog } from '../platform/core.js';
+import { esc, tr, monthGridHTML, dateKey, parseKey, addDays } from '../platform/ui.js';
 
 export function renderHaid(params) {
   const active = !!store.state.haid[dateKey(new Date())];

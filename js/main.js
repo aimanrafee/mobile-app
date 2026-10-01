@@ -1,7 +1,7 @@
 /** main.js — orkestrasi Taubat.App (entry point) */
 import { initApp } from './app.js';
-import { initDebug } from './debug.js';
-import { emitLog } from './core.js';
+import { initDebug } from './platform/debug.js';
+import { emitLog } from './platform/core.js';
 
 function boot() {
   try {

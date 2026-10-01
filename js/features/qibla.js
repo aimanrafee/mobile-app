@@ -1,6 +1,6 @@
 /** features/qibla.js — Kompas kiblat */
-import { emitLog, LOCATION, qiblaBearing, store } from '../core.js';
-import { $, esc, tr } from '../ui.js';
+import { emitLog, LOCATION, qiblaBearing, store } from '../platform/core.js';
+import { $, esc, tr } from '../platform/ui.js';
 
 let compassOn = false;
 

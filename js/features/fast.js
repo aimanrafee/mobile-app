@@ -1,6 +1,6 @@
 /** features/fast.js — Penjejak puasa (kongsi grid kalendar + tindakan cal:* dari calendar.js) */
-import { store } from '../core.js';
-import { esc, tr, monthGridHTML, dateKey, parseKey } from '../ui.js';
+import { store } from '../platform/core.js';
+import { esc, tr, monthGridHTML, dateKey, parseKey } from '../platform/ui.js';
 
 export function renderFast(params) {
   const now = new Date();

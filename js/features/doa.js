@@ -1,8 +1,8 @@
 /** features/doa.js — Al-Mathurat + koleksi doa */
-import { store } from '../core.js';
+import { store } from '../platform/core.js';
 import { MATHURAT, DUA_CATS, DUAS } from '../data.js';
-import { esc, tr, locName, dateKey, copyText, vibrate } from '../ui.js';
-import { view, render } from '../router.js';
+import { esc, tr, locName, dateKey, copyText, vibrate } from '../platform/ui.js';
+import { view, render } from '../platform/router.js';
 
 function mathuratToday() {
   const k = dateKey(new Date());

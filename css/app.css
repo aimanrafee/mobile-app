@@ -462,6 +462,8 @@ svg.ic{width:1.25rem;height:1.25rem;fill:none;stroke:currentColor;stroke-width:2
 .dp-btn.danger{color:#ef9a8f;border-color:rgb(239 154 143/.3)}
 .dp-btn .ic{width:1.05rem;height:1.05rem}
 .dp-badge{display:inline-block;padding:.1rem .5rem;border-radius:var(--r-full);background:rgb(207 224 184/.15);font-size:.62rem;margin-inline-start:.4rem}
+.dp-sec{color:var(--dp-ink);font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin:.9rem 0 .3rem}
+.dp-sec:first-child{margin-top:0}
 
 /* ---------- 12. Gerak & akses ---------- */
 .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s var(--ease),transform .7s var(--ease)}

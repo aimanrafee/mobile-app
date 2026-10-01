@@ -3,6 +3,7 @@
  *  maklumat peranti, dan tindakan ujian. Selamat: semua dibalut try/catch.
  */
 import { store, LOGS, emitLog, logListeners, toast, LOCATION, prayerTimes, toHijri, fmt12 } from './core.js';
+import { getStats } from './router.js';
 
 let enabled = false;
 let openTab = 'logs';
@@ -96,6 +97,25 @@ function renderState() {
     <div class="dp-pre">${esc(json)}</div>`;
 }
 
+/* ---------- semakan status sistem (checklist developer) ---------- */
+export function systemChecks() {
+  const out = [];
+  const row = (k, pass, v) => out.push({ k, pass: !!pass, v: v == null ? (pass ? 'lulus' : 'gagal') : String(v) });
+  try { row('store dimuat', !!store.state, Object.keys(store.state).length + ' slice'); }
+  catch (e) { row('store dimuat', false, e.message); }
+  try { localStorage.setItem('__t', '1'); localStorage.removeItem('__t'); row('localStorage tulis', true, 'boleh tulis'); }
+  catch (e) { row('localStorage tulis', false, e.message); }
+  try { const s = getStats(); row('skrin berdaftar', s.screens.length >= 14, s.screens.length + ' skrin'); }
+  catch (e) { row('skrin berdaftar', false, e.message); }
+  try { const s = getStats(); row('tindakan berdaftar', s.actions.length >= 29, s.actions.length + ' tindakan'); }
+  catch (e) { row('tindakan berdaftar', false, e.message); }
+  try { row('log bus', Array.isArray(LOGS), LOGS.length + ' entri'); }
+  catch (e) { row('log bus', false, e.message); }
+  const onLine = (typeof navigator === 'undefined' || navigator.onLine == null) ? 'n/a' : String(navigator.onLine);
+  row('dalam talian', onLine === 'n/a' || onLine === 'true', onLine);
+  return out;
+}
+
 function renderInfo() {
   const body = $('#dp-body');
   const nav = navigator;
@@ -107,6 +127,9 @@ function renderInfo() {
   } catch (e) { pt = 'ralat: ' + e.message; }
   let hj = '—';
   try { const h = toHijri(new Date()); hj = `${h.d}/${h.m}/${h.y}H`; } catch (e) { hj = 'ralat: ' + e.message; }
+  const checks = systemChecks();
+  const checkHTML = `<div class="dp-sec">Status sistem</div>` + checks.map((c) =>
+    `<div class="dp-kv"><span>${c.pass ? '✓' : '✗'} ${esc(c.k)}</span><b>${esc(c.v)}</b></div>`).join('');
   const rows = [
     ['versi', 'Taubat.App 1.0.0'],
     ['user agent', nav.userAgent],
@@ -122,12 +145,13 @@ function renderInfo() {
     ['waktu solat hari ini', pt],
     ['bil. log', String(LOGS.length)]
   ];
-  body.innerHTML = rows.map(([k, v]) => `<div class="dp-kv"><span>${esc(k)}</span><b>${esc(v)}</b></div>`).join('');
+  body.innerHTML = checkHTML + rows.map(([k, v]) => `<div class="dp-kv"><span>${esc(k)}</span><b>${esc(v)}</b></div>`).join('');
 }
 
 function renderActions() {
   const body = $('#dp-body');
   body.innerHTML = `<div class="dp-actions">
+    <button type="button" class="dp-btn" data-dbg="selftest"><svg class="ic"><use href="#i-check"/></svg>Jalankan semakan kendiri (checklist)</button>
     <button type="button" class="dp-btn" data-dbg="test-log"><svg class="ic"><use href="#i-bug"/></svg>Jana log ujian (info/warn/error)</button>
     <button type="button" class="dp-btn" data-dbg="test-error"><svg class="ic"><use href="#i-bug"/></svg>Simulasi ralat (ujian pinterap)</button>
     <button type="button" class="dp-btn" data-dbg="export"><svg class="ic"><use href="#i-download"/></svg>Eksport log (.txt)</button>
@@ -139,7 +163,13 @@ function renderActions() {
 
 function doAction(a) {
   try {
-    if (a === 'test-log') {
+    if (a === 'selftest') {
+      const cs = systemChecks();
+      const pass = cs.filter((c) => c.pass).length;
+      cs.forEach((c) => emitLog(c.pass ? 'info' : 'error', `Semakan: ${c.k} → ${c.v}`));
+      toast(`Semakan kendiri: ${pass}/${cs.length} lulus`);
+      openTab = 'logs'; renderDebugBody();
+    } else if (a === 'test-log') {
       console.log('Log ujian: maklumat biasa');
       console.warn('Log ujian: amaran contoh');
       console.error('Log ujian: ralat contoh');

@@ -1,7 +1,8 @@
 /** features/more.js — Senarai alat (Lainnya) */
-import { esc, tr } from '../ui.js';
+import { esc, tr } from '../platform/ui.js';
 
 const TOOLS = [
+  { id: 'help', icon: 'i-book', h: 't_help', p: 't_help_p' },
   { id: 'tasbih', icon: 'i-beads', h: 't_tasbih', p: 't_tasbih_p' },
   { id: 'calendar', icon: 'i-cal', h: 't_cal', p: 't_cal_p' },
   { id: 'zakat', icon: 'i-scale', h: 't_zakat', p: 't_zakat_p' },

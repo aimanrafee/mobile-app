@@ -1,8 +1,8 @@
 /** features/settings.js — Tetapan (bahasa, tema, debug, padam data) */
-import { store, emitLog, toast } from '../core.js';
-import { esc, tr, isDark, applyTheme } from '../ui.js';
-import { go, render } from '../router.js';
-import { setDebugEnabled } from '../debug.js';
+import { store, emitLog, toast } from '../platform/core.js';
+import { esc, tr, isDark, applyTheme } from '../platform/ui.js';
+import { go, render } from '../platform/router.js';
+import { setDebugEnabled } from '../platform/debug.js';
 
 export function renderSettings() {
   const st = store.state;
@@ -17,6 +17,8 @@ export function renderSettings() {
       <button type="button" class="switch${isDark() ? ' on' : ''}" role="switch" aria-checked="${isDark()}" data-action="set:theme" aria-label="${esc(tr('s_theme'))}"></button></div>
     <div class="settings-row"><span class="grow"><b>${esc(tr('s_debug'))}</b><div class="cap">${esc(tr('s_debug_p'))}</div></span>
       <button type="button" class="switch${st.debug ? ' on' : ''}" role="switch" aria-checked="${st.debug}" data-action="set:debug" aria-label="${esc(tr('s_debug'))}"></button></div>
+    <div class="settings-row"><span class="grow"><b>${esc(tr('t_help'))}</b><div class="cap">${esc(tr('t_help_p'))}</div></span>
+      <button type="button" class="mini-btn" data-action="nav:screen" data-screen="help" aria-label="${esc(tr('t_help'))}">→</button></div>
     <div class="settings-row"><span class="grow"><b>${esc(tr('s_reset'))}</b><div class="cap">${esc(tr('s_reset_p'))}</div></span>
       <button type="button" class="tb-btn" data-action="set:reset" aria-label="${esc(tr('s_reset'))}" style="color:var(--bad)"><svg class="ic"><use href="#i-trash"/></svg></button></div>
   </div>

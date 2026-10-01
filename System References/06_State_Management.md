@@ -1,6 +1,6 @@
 # 06 — State Management
 
-> Centralized store in `js/core.js:125-179`. All features read/write via `store` — no other global state.
+> Centralized store in `js/platform/core.js:125-179`. All features read/write via `store` — no other global state.
 
 ## 6.1 State Shape (`DEFAULTS`)
 

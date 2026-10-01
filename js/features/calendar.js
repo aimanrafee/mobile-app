@@ -1,11 +1,11 @@
 /** features/calendar.js — Kalendar Hijri + tarikh penting */
-import { store } from '../core.js';
+import { store } from '../platform/core.js';
 import { ISLAMIC_EVENTS } from '../data.js';
 import {
   esc, tr, monthGridHTML, dateKey, parseKey, addDays, fmtDate, dayCount,
   toHijri, hijriLabel
-} from '../ui.js';
-import { view, render } from '../router.js';
+} from '../platform/ui.js';
+import { view, render } from '../platform/router.js';
 
 export function renderCalendar(params) {
   const lang = store.state.lang;

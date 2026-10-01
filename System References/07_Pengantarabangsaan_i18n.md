@@ -1,6 +1,6 @@
 # 07 — Pengantarabangsaan (i18n)
 
-> Kamus dalam `js/core.js:17-122` (`DICT.my/en`); bantuan dalam `js/ui.js` (`tr/locName`).
+> Kamus dalam `js/platform/core.js:17-122` (`DICT.my/en`); bantuan dalam `js/platform/ui.js` (`tr/locName`).
 
 ## 7.1 Mekanisme
 

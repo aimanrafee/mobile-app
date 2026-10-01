@@ -1,6 +1,6 @@
 # 07 — Internationalization (i18n)
 
-> Dictionary in `js/core.js:17-122` (`DICT.my/en`); helpers in `js/ui.js` (`tr/locName`).
+> Dictionary in `js/platform/core.js:17-122` (`DICT.my/en`); helpers in `js/platform/ui.js` (`tr/locName`).
 
 ## 7.1 Mechanism
 

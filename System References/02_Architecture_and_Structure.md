@@ -10,11 +10,12 @@ mobile app/ (repo: taubat-mobile-app)
 ├── js/
 │   ├── main.js                   # Entry: boot initDebug + initApp
 │   ├── app.js                    # THIN wiring: register screens/actions, export initApp
-│   ├── router.js                 # view/go/push/back/render + registry + initShell
-│   ├── ui.js                     # Shared helpers: $, esc, tr, calendar, theme, vibrate
-│   ├── core.js                   # Store, DICT, prayer times, Hijri, qibla, toast
 │   ├── data.js                   # Static content: surahs, Mathurat, duas, Iqra', events
-│   ├── debug.js                  # Developer panel (logs/state/info/actions)
+│   ├── platform/                 # PLATFORM LAYER (not user features)
+│   │   ├── core.js               # Store, DICT, prayer times, Hijri, qibla, toast
+│   │   ├── ui.js                 # Shared helpers: $, esc, tr, calendar, theme, vibrate
+│   │   ├── router.js             # view/go/push/back/render + registry + initShell
+│   │   └── debug.js              # Developer panel + systemChecks + selftest
 │   └── features/                 # ONE file = ONE feature
 │       ├── home.js               # Prayer tracker + streak + heatmap + countdown
 │       ├── quran.js              # Surah list + surah + bookmarks
@@ -43,21 +44,21 @@ mobile app/ (repo: taubat-mobile-app)
 - Imports each feature's render/actions → `registerScreen(id, fn, {title})` → `registerActions(...)` → `registerOnShow(...)` for home & quran.
 - `initApp()` = `initShell(...)` + log + `render()`. Re-exports `view/go/push/back/render` for compatibility (`main.js` imports from here).
 
-### `js/router.js` — Navigation + Registry
+### `js/platform/router.js` — Navigation + Registry
 - `view = {tab, screen, params}`; `go(tab)` (reset), `push(screen, params)`, `back()`, `render(keepScroll)` (clear timers → inject HTML → title/back/active tab → `data-i18n` → onShow hooks → scroll).
 - Registries: `SCREENS`, `ACTIONS` (base `nav:tab/nav:screen/nav:back` always available), `ON_SHOW`.
 - `initShell()` wires once: `[data-action]` click delegation, tabbar, back, theme, language, 7-tap title easter egg → debug.
 
-### `js/ui.js` — Shared Helpers
+### `js/platform/ui.js` — Shared Helpers
 - DOM/i18n: `$`, `$$`, `esc`, `tr`, `locName`; timers: `clearTimers/every`; day: `dayRecord/dayCount/isExempt/greetKey`; theme: `isDark/applyTheme`; `copyText/vibrate`; `monthGridHTML(params, mode)` shared by calendar/fast/haid.
 
-### `js/core.js` — UI-Free Core
+### `js/platform/core.js` — UI-Free Core
 - `store` (`taubat_app_v1`), `DICT` (my/en), `prayerTimes` (MWL: Fajr 18°, Isha 17°), `toHijri` (Intl + tabular fallback), `qiblaBearing`, `nextPrayer`, `toast`, `emitLog`.
 
 ### `js/data.js` — Static Content Only
 - `SURAHS` (selected Juz 'Amma), `BISMILLAH`, `MATHURAT`, `DUA_CATS/DUAS`, `IQRA_LEVELS`, `ISLAMIC_EVENTS`, `HIJRI_MONTHS`, `QUOTES`. No logic.
 
-### `js/debug.js` — Developer Panel
+### `js/platform/debug.js` — Developer Panel
 - Console + global error hooks → `LOGS` (max 500); Logs/State/Info/Actions tabs; `setDebugEnabled/isDebugEnabled/openDebugPanel/initDebug`.
 
 ## 2.3 Data Flow and Dependencies

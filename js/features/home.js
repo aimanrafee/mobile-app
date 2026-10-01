@@ -1,11 +1,11 @@
 /** features/home.js — Skrin Utama (tracker solat + streak + heatmap + quote) */
-import { store, emitLog, prayerTimes, PRAYERS, nextPrayer, toast } from '../core.js';
+import { store, emitLog, prayerTimes, PRAYERS, nextPrayer, toast } from '../platform/core.js';
 import { QUOTES } from '../data.js';
 import {
   $, esc, tr, every, dateKey, parseKey, addDays, fmt12, dayName, fmtDate,
   hijriLabel, dayRecord, dayCount, isExempt, greetKey
-} from '../ui.js';
-import { view, render } from '../router.js';
+} from '../platform/ui.js';
+import { view, render } from '../platform/router.js';
 
 export function renderHome() {
   const today = new Date();

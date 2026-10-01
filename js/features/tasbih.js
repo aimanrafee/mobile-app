@@ -1,7 +1,7 @@
 /** features/tasbih.js — Tasbih digital */
-import { store, toast } from '../core.js';
-import { esc, tr, dateKey, vibrate } from '../ui.js';
-import { render } from '../router.js';
+import { store, toast } from '../platform/core.js';
+import { esc, tr, dateKey, vibrate } from '../platform/ui.js';
+import { render } from '../platform/router.js';
 
 export const PHRASES = [
   { id: 'subhanallah', ar: 'سُبْحَانَ اللَّهِ', latin: 'Subhanallah', my: 'Maha Suci Allah', en: 'Glory be to Allah' },

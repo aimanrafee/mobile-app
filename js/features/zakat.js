@@ -1,6 +1,6 @@
 /** features/zakat.js — Kalkulator zakat harta */
-import { store, emitLog } from '../core.js';
-import { $, esc, tr } from '../ui.js';
+import { store, emitLog } from '../platform/core.js';
+import { $, esc, tr } from '../platform/ui.js';
 
 export function renderZakat() {
   return `<div class="home-head"><p class="kicker">${esc(tr('zakat_title'))}</p></div>

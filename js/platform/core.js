@@ -33,6 +33,9 @@ export const DICT = {
     doa_title:'Al-Mathurat & Doa', morning:'Pagi', evening:'Petang', dua_collection:'Koleksi Doa',
     tap_to_count:'Ketik untuk kira', completed:'Selesai',
     tools_title:'Alat & Tetapan',
+    t_help:'Panduan', t_help_p:'Cara guna setiap ciri',
+    help_title:'Panduan Pengguna', help_sub:'Semua yang perlu anda tahu untuk guna aplikasi ini.',
+    faq_title:'Soalan lazim',
     t_tasbih:'Tasbih', t_tasbih_p:'Kiraan zikir digital',
     t_cal:'Kalendar', t_cal_p:'Hijri & tarikh penting',
     t_zakat:'Kalkulator Zakat', t_zakat_p:'Kira zakat harta',
@@ -85,6 +88,9 @@ export const DICT = {
     doa_title:'Al-Mathurat & Duas', morning:'Morning', evening:'Evening', dua_collection:'Dua Collection',
     tap_to_count:'Tap to count', completed:'Completed',
     tools_title:'Tools & Settings',
+    t_help:'Guide', t_help_p:'How to use every feature',
+    help_title:'User Guide', help_sub:'Everything you need to use this app.',
+    faq_title:'FAQ',
     t_tasbih:'Tasbih', t_tasbih_p:'Digital dhikr counter',
     t_cal:'Calendar', t_cal_p:'Hijri & important dates',
     t_zakat:'Zakat Calculator', t_zakat_p:'Calculate zakat on wealth',
@@ -210,7 +216,7 @@ export function fmtDate(d, lang) {
 }
 
 /* =============== HIJRI =============== */
-import { HIJRI_MONTHS } from './data.js';
+import { HIJRI_MONTHS } from '../data.js';
 let hijriFmt = null;
 try {
   hijriFmt = new Intl.DateTimeFormat('en-u-ca-islamic', { day: 'numeric', month: 'numeric', year: 'numeric' });

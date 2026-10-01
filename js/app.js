@@ -6,13 +6,13 @@
  *
  *  Tambah ciri baru: cipta fail dalam features/ → import di bawah → registerScreen + registerActions.
  */
-import { store, emitLog } from './core.js';
+import { store, emitLog } from './platform/core.js';
 import {
   view, go, push, back, render,
   registerScreen, registerActions, registerOnShow, initShell
-} from './router.js';
-import { isDark, applyTheme } from './ui.js';
-import { setDebugEnabled } from './debug.js';
+} from './platform/router.js';
+import { isDark, applyTheme } from './platform/ui.js';
+import { setDebugEnabled } from './platform/debug.js';
 
 import { renderHome, homeActions, homeOnShow } from './features/home.js';
 import { renderQuran, renderSurah, quranActions, quranOnShow } from './features/quran.js';
@@ -26,6 +26,7 @@ import { renderQibla, qiblaActions } from './features/qibla.js';
 import { renderFast, fastActions } from './features/fast.js';
 import { renderHaid, haidActions } from './features/haid.js';
 import { renderSettings, settingsActions } from './features/settings.js';
+import { renderHelp, helpActions } from './features/help.js';
 
 /* ---------- daftar skrin (id + judul topbar) ---------- */
 registerScreen('home', renderHome, { title: null });
@@ -42,6 +43,7 @@ registerScreen('qibla', renderQibla, { title: 'Kiblat' });
 registerScreen('fast', renderFast, { title: 'Puasa' });
 registerScreen('haid', renderHaid, { title: 'Haid' });
 registerScreen('settings', renderSettings, { title: 'Tetapan' });
+registerScreen('help', renderHelp, { title: 'Panduan' });
 
 /* ---------- daftar tindakan setiap ciri ---------- */
 registerActions(homeActions);
@@ -55,6 +57,7 @@ registerActions(qiblaActions);
 registerActions(fastActions);
 registerActions(haidActions);
 registerActions(settingsActions);
+registerActions(helpActions);
 
 /* ---------- hook selepas render (timer, carian live) ---------- */
 registerOnShow((v) => v.tab === 'home' && !v.screen, homeOnShow);

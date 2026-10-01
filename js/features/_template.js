@@ -9,9 +9,9 @@
  *       registerOnShow((v) => v.screen === 'namaCiri', () => {...});
  *  4. Buka skrin: push('namaCiri') atau <button data-action="nav:screen" data-screen="namaCiri">
  */
-import { store } from '../core.js';
-import { esc, tr } from '../ui.js';
-import { render } from '../router.js';
+import { store } from '../platform/core.js';
+import { esc, tr } from '../platform/ui.js';
+import { render } from '../platform/router.js';
 
 export function renderNamaCiri(params) {
   return `<div class="home-head"><p class="kicker">${esc(tr('tools_title'))}</p></div>

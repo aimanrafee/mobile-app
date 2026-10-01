@@ -1,8 +1,8 @@
 /** features/iqra.js — Tahap Iqra' + sel huruf */
-import { store, toast } from '../core.js';
+import { store, toast } from '../platform/core.js';
 import { IQRA_LEVELS } from '../data.js';
-import { esc, tr, locName } from '../ui.js';
-import { push, render } from '../router.js';
+import { esc, tr, locName } from '../platform/ui.js';
+import { push, render } from '../platform/router.js';
 
 function levelProgress(lv) {
   const done = lv.cells.filter((c, i) => store.state.iqra[lv.id + ':' + i]).length;

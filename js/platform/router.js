@@ -43,6 +43,11 @@ export function registerOnShow(match, fn) {
 
 export function getAction(name) { return ACTIONS[name]; }
 
+/** Statistik registry untuk panel debug / semakan kendiri (tanpa dedah objek dalaman). */
+export function getStats() {
+  return { screens: Object.keys(SCREENS), actions: Object.keys(ACTIONS) };
+}
+
 export function go(tab) { view.tab = tab; view.screen = null; view.params = {}; render(); emitLog('info', 'Navigasi → tab ' + tab); }
 export function push(screen, params) { view.screen = screen; view.params = params || {}; render(); }
 export function back() { view.screen = null; view.params = {}; render(); }
