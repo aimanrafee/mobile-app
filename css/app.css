@@ -1,0 +1,472 @@
+/* ============================================================
+   Taubat.App — Aplikasi Mobile
+   app.css : tokens + komponen + skrin
+   Palet: krim / zaitun / emas · Fon: Inter + Playfair + Scheherazade
+   ============================================================ */
+
+/* ---------- 1. Design tokens ---------- */
+:root{
+  --cream-100:#FAF8F3; --cream-200:#F1EEE2; --white:#FFFFFF;
+  --olive-500:#5A6B3E; --olive-800:#354236; --olive-900:#272C20;
+  --gold-500:#B69D74; --ink-900:#2A2F2C; --ink-500:#6B726C;
+  --chip:#EBE6D8;
+
+  --bg:var(--cream-100); --surface:var(--white); --wash:var(--cream-200);
+  --text:var(--ink-900); --muted:var(--ink-500);
+  --border:rgb(0 0 0 / .07); --accent:var(--olive-500); --gold:var(--gold-500);
+  --chip-bg:var(--chip);
+  --ok:#4e7c43; --warn:#b0823a; --bad:#a35347; --info:#5b6f8a;
+  --tabbar:#1c1c1c; --tabbar-ink:#9a9a9a; --tabbar-active:#ffffff;
+  --sheet:#ffffff; --hairline:rgb(0 0 0 / .07);
+  --period:#c97ba2; --period-soft:#f3dfe9; --period-ink:#5c2440;
+  --mushaf-bar:#2f5a43; --mushaf-bg:#fdfaf1; --mushaf-line:#ece4cd;
+  --heat-0:#eee9db; --heat-1:#cfd6b4; --heat-2:#a3b47c; --heat-3:#75895a; --heat-4:#4e6238;
+  --dp-bg:#15170f; --dp-ink:#cfe0b8; --dp-dim:#8b9779;
+
+  --font-body:"Inter",system-ui,-apple-system,sans-serif;
+  --font-display:"Playfair Display",Georgia,serif;
+  --font-quran:"Scheherazade New","Traditional Arabic",serif;
+
+  --r-sm:.55rem; --r-md:.8rem; --r-lg:1.1rem; --r-xl:1.5rem; --r-full:999px;
+  --s1:.4rem; --s2:.6rem; --s3:.9rem; --s4:1.25rem; --s5:1.8rem; --s6:2.6rem;
+  --shadow-md:0 4px 14px -2px rgb(30 35 25/.10),0 2px 5px -2px rgb(30 35 25/.06);
+  --shadow-lg:0 22px 44px -14px rgb(30 35 25/.28);
+  --ease:cubic-bezier(.16,1,.3,1);
+  --topbar-h:3.4rem; --tabbar-h:4.6rem;
+}
+.dark{
+  --bg:#1D201B; --surface:#262A24; --wash:#1D201B;
+  --text:#ECE8DD; --muted:#A7ACA3; --border:rgb(255 255 255 / .09);
+  --chip-bg:#33382F; --sheet:#2a2e28; --hairline:rgb(255 255 255 / .10);
+  --accent:#8ba062; --gold:#c9b088;
+  --tabbar:#101010; --tabbar-ink:#8a8a8a;
+  --period-soft:#4a2a3b; --period-ink:#f0c6da; --period:#c98aa9;
+  --mushaf-bg:#222822; --mushaf-bar:#1e3a2d; --mushaf-line:rgb(255 255 255 / .10);
+  --heat-0:#2b2f26; --heat-1:#3d4830; --heat-2:#5a6b3e; --heat-3:#7d9459; --heat-4:#a4bd7c;
+  --shadow-md:0 4px 14px -2px rgb(0 0 0/.4);
+  --shadow-lg:0 22px 44px -14px rgb(0 0 0/.55);
+}
+
+/* ---------- 2. Asas ---------- */
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; font-family:var(--font-body); background:var(--wash); color:var(--text);
+  min-height:100dvh; -webkit-font-smoothing:antialiased; overscroll-behavior-y:none;
+}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;padding:0}
+input,select{font:inherit;color:inherit}
+svg.ic{width:1.25rem;height:1.25rem;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.skip{position:fixed;top:-4rem;left:1rem;z-index:200;background:var(--olive-900);color:#fff;padding:.5rem 1rem;border-radius:var(--r-sm);transition:top .2s}
+.skip:focus{top:.6rem}
+[hidden]{display:none!important}
+:focus-visible{outline:2px solid var(--gold);outline-offset:2px;border-radius:var(--r-sm)}
+
+/* ---------- 3. Rangka aplikasi ---------- */
+#app-shell{
+  position:relative; max-width:30rem; margin:0 auto; min-height:100dvh;
+  background:var(--bg); display:flex; flex-direction:column;
+  box-shadow:0 0 0 1px var(--border),0 0 60px rgb(0 0 0/.06);
+}
+@media (min-width:34rem){
+  body{background:
+    radial-gradient(60rem 40rem at 80% -10%,rgb(90 107 62/.14),transparent 60%),
+    radial-gradient(50rem 36rem at -10% 110%,rgb(182 157 116/.16),transparent 60%),
+    var(--wash);}
+}
+#app-topbar{
+  position:sticky;top:0;z-index:40;background:color-mix(in srgb,var(--bg) 86%,transparent);
+  backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--border);
+  padding-top:env(safe-area-inset-top);
+}
+.topbar-in{height:var(--topbar-h);display:flex;align-items:center;gap:var(--s2);padding:0 var(--s3)}
+.tb-title{font-family:var(--font-display);font-size:1.15rem;font-weight:600;flex:1;text-align:center}
+.tb-title b{color:var(--accent)}
+.tb-btn{
+  min-width:2.4rem;height:2.4rem;border-radius:var(--r-full);display:inline-flex;align-items:center;justify-content:center;
+  font-weight:600;font-size:.8rem;color:var(--muted);transition:background .2s,transform .15s;
+}
+.tb-btn:active{transform:scale(.92)}
+.tb-btn:hover{background:var(--chip-bg)}
+#app-main{flex:1;outline:none;padding-bottom:calc(var(--tabbar-h) + 1.4rem + env(safe-area-inset-bottom))}
+#screen{animation:screenIn .35s var(--ease)}
+@keyframes screenIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+
+/* ---------- 4. Tab bar terapung ---------- */
+#tabbar{
+  position:fixed;left:50%;transform:translateX(-50%);
+  bottom:calc(.8rem + env(safe-area-inset-bottom));z-index:50;
+  width:min(calc(100% - 1.6rem),28.4rem);
+  background:var(--tabbar);border-radius:var(--r-full);
+  display:flex;padding:.45rem;gap:.15rem;box-shadow:var(--shadow-lg);
+}
+.tab{
+  flex:1;display:flex;flex-direction:column;align-items:center;gap:.18rem;
+  padding:.5rem .2rem .45rem;border-radius:var(--r-full);color:var(--tabbar-ink);
+  font-size:.62rem;font-weight:500;letter-spacing:.01em;transition:color .25s,background .25s,transform .15s;
+}
+.tab .ic{width:1.2rem;height:1.2rem}
+.tab:active{transform:scale(.94)}
+.tab.active{color:var(--tabbar-active);background:rgb(255 255 255 / .10)}
+.tab.active::after{content:"";width:.28rem;height:.28rem;border-radius:50%;background:var(--gold);margin-top:-.1rem}
+
+/* ---------- 5. Komponen umum ---------- */
+.wrap{padding:0 var(--s4)}
+.kicker{font-size:.72rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.h-display{font-family:var(--font-display);font-weight:600;line-height:1.16}
+.muted{color:var(--muted)}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);box-shadow:var(--shadow-md)}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.45rem;
+  padding:.72rem 1.3rem;border-radius:var(--r-full);font-weight:600;font-size:.92rem;
+  background:var(--olive-900);color:#f4f2ea;transition:transform .15s,opacity .2s;user-select:none;
+}
+.btn:active{transform:scale(.96)}
+.btn.ghost{background:var(--chip-bg);color:var(--text)}
+.btn.gold{background:var(--gold);color:#2a2417}
+.btn.block{width:100%}
+.divider{height:1px;background:var(--hairline);margin:var(--s3) 0}
+.chip{
+  display:inline-flex;align-items:center;gap:.35rem;padding:.42rem .85rem;border-radius:var(--r-full);
+  background:var(--chip-bg);font-size:.8rem;font-weight:500;transition:transform .15s,background .2s;
+}
+.chip:active{transform:scale(.95)}
+.chip.on{background:var(--olive-800);color:#f0efe4}
+.pill-toggle{display:inline-flex;background:var(--chip-bg);border-radius:var(--r-full);padding:.2rem;gap:.15rem}
+.pill-toggle button{padding:.4rem .9rem;border-radius:var(--r-full);font-size:.8rem;font-weight:600;color:var(--muted)}
+.pill-toggle button.on{background:var(--surface);color:var(--text);box-shadow:var(--shadow-md)}
+
+/* Switch */
+.switch{position:relative;width:2.9rem;height:1.65rem;border-radius:var(--r-full);background:var(--chip-bg);transition:background .25s;flex:none;border:1px solid var(--border)}
+.switch::after{content:"";position:absolute;top:.18rem;left:.2rem;width:1.22rem;height:1.22rem;border-radius:50%;background:#fff;box-shadow:0 1px 4px rgb(0 0 0/.25);transition:transform .25s var(--ease)}
+.switch.on{background:var(--accent)}
+.switch.on::after{transform:translateX(1.22rem)}
+
+/* Toast */
+#toast{
+  position:fixed;left:50%;bottom:calc(var(--tabbar-h) + 2.2rem + env(safe-area-inset-bottom));transform:translateX(-50%);
+  z-index:120;background:var(--olive-900);color:#f2f0e6;font-size:.85rem;font-weight:500;
+  padding:.65rem 1.2rem;border-radius:var(--r-full);box-shadow:var(--shadow-lg);
+  animation:toastIn .3s var(--ease);max-width:86vw;text-align:center;
+}
+@keyframes toastIn{from{opacity:0;transform:translate(-50%,12px)}to{opacity:1;transform:translate(-50%,0)}}
+
+/* Bottom sheet */
+.sheet-backdrop{position:fixed;inset:0;z-index:90;background:rgb(15 18 12/.45);backdrop-filter:blur(3px);animation:fadeIn .25s}
+@keyframes fadeIn{from{opacity:0}}
+.sheet{
+  position:fixed;left:50%;transform:translateX(-50%);bottom:0;z-index:95;
+  width:min(100%,30rem);max-height:82dvh;overflow-y:auto;
+  background:var(--sheet);border-radius:var(--r-xl) var(--r-xl) 0 0;
+  padding:var(--s2) var(--s4) calc(var(--s5) + env(safe-area-inset-bottom));
+  box-shadow:var(--shadow-lg);animation:sheetUp .38s var(--ease);
+}
+@keyframes sheetUp{from{transform:translate(-50%,40px);opacity:0}}
+.sheet .grab{width:2.6rem;height:.3rem;border-radius:var(--r-full);background:var(--hairline);margin:.4rem auto 1rem}
+.sheet h3{font-family:var(--font-display);margin:.2rem 0 .8rem;font-size:1.25rem}
+
+/* Baris senarai */
+.rowline{display:flex;align-items:center;gap:var(--s3);padding:var(--s3) 0;border-bottom:1px solid var(--hairline)}
+.rowline:last-child{border-bottom:0}
+.grow{flex:1;min-width:0}
+.cap{font-size:.74rem}
+
+/* ---------- 6. Skrin Utama / Solat ---------- */
+.home-head{padding:var(--s4) var(--s4) 0}
+.date-row{display:flex;align-items:flex-end;justify-content:space-between;gap:var(--s3)}
+.day-big{font-family:var(--font-display);font-size:2.2rem;font-weight:700;line-height:1}
+.date-sub{font-size:.78rem;color:var(--muted);margin-top:.25rem}
+.date-hijri{color:var(--accent);font-weight:600}
+.icon-cluster{display:flex;gap:.2rem}
+.weekstrip{display:flex;gap:.35rem;margin-top:var(--s3);overflow-x:auto;scrollbar-width:none;padding-bottom:.2rem}
+.weekstrip::-webkit-scrollbar{display:none}
+.day-cell{
+  flex:1;min-width:2.9rem;display:flex;flex-direction:column;align-items:center;gap:.15rem;
+  padding:.55rem .2rem;border-radius:var(--r-md);font-size:.72rem;color:var(--muted);
+  transition:background .2s,transform .15s;position:relative;
+}
+.day-cell b{font-size:1rem;font-weight:600;color:var(--text)}
+.day-cell:active{transform:scale(.93)}
+.day-cell.sel{background:var(--olive-800);color:#cfd6bd}
+.day-cell.sel b{color:#fff}
+.day-cell .dots{display:flex;gap:.12rem;height:.3rem}
+.day-cell .dots i{width:.22rem;height:.22rem;border-radius:50%;background:var(--gold)}
+.day-cell.today:not(.sel){box-shadow:inset 0 0 0 1.5px var(--gold)}
+
+.next-card{
+  margin:var(--s4) var(--s4) 0;padding:var(--s4);border-radius:var(--r-xl);color:#f2f1e7;
+  background:
+    radial-gradient(22rem 12rem at 110% -20%,rgb(182 157 116/.35),transparent 55%),
+    linear-gradient(150deg,var(--olive-800),var(--olive-900) 70%);
+  box-shadow:var(--shadow-lg);position:relative;overflow:hidden;
+}
+.next-card::after{
+  content:"";position:absolute;inset:0;opacity:.10;pointer-events:none;
+  background-image:repeating-conic-gradient(from 0deg at 88% -10%,transparent 0 18deg,rgb(255 255 255/.5) 18deg 18.6deg);
+}
+.next-card .nc-kick{font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:600}
+.next-card .nc-name{font-family:var(--font-display);font-size:1.7rem;font-weight:700;margin-top:.15rem}
+.next-card .nc-count{font-size:2.1rem;font-weight:300;font-variant-numeric:tabular-nums;letter-spacing:.02em;margin-top:.2rem}
+.next-card .nc-meta{font-size:.78rem;color:#c9cec0;margin-top:.3rem}
+.nc-progress{height:.3rem;border-radius:var(--r-full);background:rgb(255 255 255/.14);margin-top:var(--s3);overflow:hidden}
+.nc-progress i{display:block;height:100%;background:var(--gold);border-radius:inherit;transition:width .6s var(--ease)}
+
+.prayer-list{margin:var(--s4) var(--s4) 0;padding:.2rem var(--s4)}
+.p-row{display:flex;align-items:center;gap:var(--s3);padding:.9rem 0;border-bottom:1px solid var(--hairline)}
+.p-row:last-child{border-bottom:0}
+.p-ico{width:2.3rem;height:2.3rem;border-radius:var(--r-md);background:var(--wash);display:grid;place-items:center;color:var(--accent)}
+.dark .p-ico{background:rgb(255 255 255/.05)}
+.p-name{font-weight:600}
+.p-time{font-size:.82rem;color:var(--muted);font-variant-numeric:tabular-nums}
+.p-row.now .p-name{color:var(--accent)}
+.p-row.now .p-ico{background:var(--olive-800);color:#e8ecdc}
+.p-status{display:flex;gap:.3rem;margin-left:auto}
+.st-btn{
+  padding:.38rem .7rem;border-radius:var(--r-full);font-size:.72rem;font-weight:600;
+  background:var(--chip-bg);color:var(--muted);transition:all .2s;
+}
+.st-btn:active{transform:scale(.92)}
+.st-btn.on-ontime{background:var(--ok);color:#fff}
+.st-btn.on-late{background:var(--warn);color:#fff}
+.st-btn.on-qada{background:var(--info);color:#fff}
+.p-row.exempt{opacity:.55}
+.p-row.exempt .p-ico{background:var(--period-soft);color:var(--period-ink)}
+.exempt-tag{margin-left:auto;font-size:.72rem;font-weight:600;color:var(--period-ink);background:var(--period-soft);padding:.35rem .7rem;border-radius:var(--r-full)}
+
+.sec-title{display:flex;align-items:baseline;justify-content:space-between;margin:var(--s5) var(--s4) var(--s2)}
+.sec-title h2{font-family:var(--font-display);font-size:1.2rem;margin:0}
+.sec-title .more{font-size:.78rem;color:var(--accent);font-weight:600}
+
+.heatmap-card{margin:0 var(--s4);padding:var(--s4)}
+.heatmap{display:grid;grid-template-columns:repeat(14,1fr);gap:.22rem;margin-top:var(--s3)}
+.heatmap i{aspect-ratio:1;border-radius:.22rem;background:var(--heat-0)}
+.heatmap i.l1{background:var(--heat-1)}.heatmap i.l2{background:var(--heat-2)}
+.heatmap i.l3{background:var(--heat-3)}.heatmap i.l4{background:var(--heat-4)}
+.heat-legend{display:flex;align-items:center;gap:.3rem;justify-content:flex-end;font-size:.68rem;color:var(--muted);margin-top:var(--s2)}
+.heat-legend i{width:.6rem;height:.6rem;border-radius:.16rem}
+.streak-row{display:flex;gap:var(--s3);margin:var(--s3) var(--s4) 0}
+.stat-chip{flex:1;text-align:center;padding:var(--s3) var(--s2)}
+.stat-chip b{display:block;font-family:var(--font-display);font-size:1.5rem}
+.stat-chip span{font-size:.7rem;color:var(--muted)}
+
+.quote-card{margin:var(--s4);padding:var(--s5) var(--s4);text-align:center;background:linear-gradient(160deg,var(--surface),var(--cream-200))}
+.dark .quote-card{background:linear-gradient(160deg,var(--surface),#20241d)}
+.quote-card .q-ar{font-family:var(--font-quran);font-size:1.7rem;line-height:2;color:var(--accent)}
+.quote-card .q-tx{font-family:var(--font-display);font-style:italic;margin-top:var(--s2);font-size:1.02rem}
+.quote-card .q-ref{font-size:.72rem;color:var(--muted);margin-top:var(--s2)}
+
+/* ---------- 7. Quran ---------- */
+.search-box{margin:var(--s3) var(--s4) 0;display:flex;align-items:center;gap:var(--s2);background:var(--surface);border:1px solid var(--border);border-radius:var(--r-full);padding:.65rem 1rem}
+.search-box input{flex:1;border:0;background:none;outline:none;font-size:.92rem}
+.surah-row{display:flex;align-items:center;gap:var(--s3);width:100%;padding:var(--s3) var(--s4);border-bottom:1px solid var(--hairline);text-align:start;transition:background .15s}
+.surah-row:active{background:var(--chip-bg)}
+.surah-num{
+  width:2.4rem;height:2.4rem;flex:none;display:grid;place-items:center;font-weight:600;font-size:.85rem;
+  color:var(--accent);background:var(--wash);border-radius:.7rem;transform:rotate(45deg);
+}
+.surah-num span{transform:rotate(-45deg)}
+.dark .surah-num{background:rgb(255 255 255/.05)}
+.surah-ar{font-family:var(--font-quran);font-size:1.25rem}
+.quran-top{display:flex;gap:var(--s2);padding:var(--s3) var(--s4) 0;align-items:center;justify-content:space-between}
+.mushaf-head{
+  margin:var(--s3) var(--s4);padding:var(--s4);border-radius:var(--r-lg);text-align:center;color:#f4efe0;
+  background:linear-gradient(150deg,#35644b,var(--mushaf-bar));position:relative;overflow:hidden;
+}
+.mushaf-head::before,.mushaf-head::after{
+  content:"";position:absolute;inset:.5rem;border:1px solid rgb(244 239 224/.35);border-radius:calc(var(--r-lg) - .4rem);pointer-events:none;
+}
+.mushaf-head .ar{font-family:var(--font-quran);font-size:1.6rem}
+.mushaf-head .tr{font-size:.78rem;opacity:.85;margin-top:.2rem}
+.bismillah{font-family:var(--font-quran);font-size:1.9rem;text-align:center;color:var(--accent);margin:var(--s4) var(--s4) 0;line-height:1.9}
+.ayah{padding:var(--s4);border-bottom:1px solid var(--mushaf-line);background:var(--mushaf-bg)}
+.ayah:nth-child(even){background:color-mix(in srgb,var(--mushaf-bg) 92%,var(--text) 3%)}
+.ayah .ar{font-family:var(--font-quran);font-size:1.85rem;line-height:2.15;text-align:right;direction:rtl}
+.ayah .num{
+  display:inline-grid;place-items:center;width:1.9rem;height:1.9rem;margin-inline-start:.5rem;
+  font-family:var(--font-body);font-size:.72rem;font-weight:600;color:var(--gold);
+  border:1.5px solid var(--gold);border-radius:50%;vertical-align:.2rem;
+}
+.ayah .my{margin-top:var(--s2);font-size:.92rem;line-height:1.7}
+.ayah .en{margin-top:.3rem;font-size:.82rem;line-height:1.6;color:var(--muted);font-style:italic}
+.ayah-tools{display:flex;gap:var(--s2);margin-top:var(--s3)}
+.mini-btn{display:inline-flex;align-items:center;gap:.3rem;font-size:.74rem;font-weight:600;color:var(--accent);padding:.35rem .7rem;border-radius:var(--r-full);background:var(--chip-bg)}
+.mini-btn .ic{width:.9rem;height:.9rem}
+.mini-btn.on{background:var(--olive-800);color:#fff}
+.read-banner{
+  position:sticky;bottom:calc(var(--tabbar-h) + 1.6rem + env(safe-area-inset-bottom));margin:var(--s4);z-index:20;
+  display:flex;align-items:center;gap:var(--s3);padding:var(--s3) var(--s4);border-radius:var(--r-full);
+  background:var(--olive-900);color:#efeee2;box-shadow:var(--shadow-lg);font-size:.85rem;
+}
+.read-banner .grow{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+
+/* ---------- 8. Iqra / Belajar ---------- */
+.level-grid{display:grid;grid-template-columns:1fr 1fr;gap:var(--s3);padding:var(--s3) var(--s4) 0}
+.level-card{padding:var(--s4);text-align:start;position:relative;transition:transform .15s}
+.level-card:active{transform:scale(.97)}
+.level-card .lv{font-family:var(--font-display);font-size:1.8rem;color:var(--gold);font-weight:700}
+.level-card h3{margin:.2rem 0 .3rem;font-size:1rem}
+.level-card p{margin:0;font-size:.76rem;color:var(--muted);line-height:1.5}
+.level-card .done-ring{position:absolute;top:var(--s3);inset-inline-end:var(--s3);width:1.4rem;height:1.4rem;border-radius:50%;border:2px solid var(--hairline);display:grid;place-items:center;color:#fff}
+.level-card .done-ring.on{background:var(--ok);border-color:var(--ok)}
+.level-card .done-ring .ic{width:.8rem;height:.8rem}
+.iqra-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--hairline);border:1px solid var(--hairline);border-radius:var(--r-lg);overflow:hidden;margin:var(--s3) var(--s4) 0}
+.iqra-cell{
+  background:var(--surface);padding:1.1rem .4rem;text-align:center;font-family:var(--font-quran);
+  font-size:1.7rem;direction:rtl;transition:background .2s;position:relative;
+}
+.iqra-cell small{display:block;font-family:var(--font-body);font-size:.66rem;color:var(--muted);direction:ltr;margin-top:.2rem}
+.iqra-cell.red{color:#a02c2c}
+.dark .iqra-cell.red{color:#e08080}
+.iqra-cell.mastered{background:color-mix(in srgb,var(--ok) 12%,var(--surface))}
+.iqra-cell.mastered::after{content:"";position:absolute;top:.35rem;inset-inline-end:.35rem;width:.45rem;height:.45rem;border-radius:50%;background:var(--ok)}
+
+/* ---------- 9. Zikir / Mathurat / Doa ---------- */
+.dua-card{margin:var(--s3) var(--s4) 0;padding:var(--s4)}
+.dua-card .ar{font-family:var(--font-quran);font-size:1.55rem;line-height:2.1;text-align:right;direction:rtl;color:var(--text)}
+.dua-card .my{margin-top:var(--s2);font-size:.9rem;line-height:1.7;color:var(--muted)}
+.dua-foot{display:flex;align-items:center;justify-content:space-between;margin-top:var(--s3);gap:var(--s3)}
+.count-btn{
+  min-width:5.2rem;padding:.6rem 1.1rem;border-radius:var(--r-full);font-weight:700;font-variant-numeric:tabular-nums;
+  background:var(--olive-800);color:#f1efe2;transition:transform .12s,background .3s;
+}
+.count-btn:active{transform:scale(.9)}
+.count-btn.done{background:var(--ok)}
+.dua-cats{display:flex;gap:var(--s2);overflow-x:auto;padding:var(--s3) var(--s4) 0;scrollbar-width:none}
+.dua-cats::-webkit-scrollbar{display:none}
+
+/* ---------- 10. Alat (More) ---------- */
+.tool-grid{display:grid;grid-template-columns:1fr 1fr;gap:var(--s3);padding:var(--s3) var(--s4) 0}
+.tool-card{display:flex;flex-direction:column;gap:var(--s2);padding:var(--s4);text-align:start;transition:transform .15s}
+.tool-card:active{transform:scale(.97)}
+.tool-card .t-ico{width:2.5rem;height:2.5rem;border-radius:var(--r-md);display:grid;place-items:center;background:var(--wash);color:var(--accent)}
+.dark .tool-card .t-ico{background:rgb(255 255 255/.06)}
+.tool-card h3{margin:0;font-size:.95rem}
+.tool-card p{margin:0;font-size:.74rem;color:var(--muted);line-height:1.5}
+.settings-row{display:flex;align-items:center;gap:var(--s3);padding:var(--s3) var(--s4);border-bottom:1px solid var(--hairline)}
+.settings-row .grow{flex:1}
+.settings-row .cap{font-size:.74rem;color:var(--muted)}
+
+/* Tasbih */
+.tasbih-stage{padding:var(--s5) var(--s4);text-align:center}
+.tasbih-phrase{font-family:var(--font-quran);font-size:2.2rem;color:var(--accent);line-height:1.8}
+.tasbih-latin{font-family:var(--font-display);font-style:italic;color:var(--muted);margin-top:.2rem}
+.tasbih-ring{
+  width:15rem;height:15rem;margin:var(--s5) auto 0;border-radius:50%;position:relative;
+  display:grid;place-items:center;background:var(--surface);box-shadow:var(--shadow-lg),inset 0 0 0 1px var(--border);
+  transition:transform .1s;user-select:none;-webkit-user-select:none;touch-action:manipulation;
+}
+.tasbih-ring:active{transform:scale(.965)}
+.tasbih-ring svg.ring{position:absolute;inset:.7rem;width:calc(100% - 1.4rem);height:calc(100% - 1.4rem);transform:rotate(-90deg)}
+.tasbih-ring .tr-bg{fill:none;stroke:var(--hairline);stroke-width:6}
+.tasbih-ring .tr-fg{fill:none;stroke:var(--gold);stroke-width:6;stroke-linecap:round;transition:stroke-dashoffset .2s var(--ease)}
+.tasbih-count{font-family:var(--font-display);font-size:3.6rem;font-weight:700;font-variant-numeric:tabular-nums;line-height:1}
+.tasbih-target{font-size:.8rem;color:var(--muted);margin-top:.3rem}
+.tasbih-actions{display:flex;gap:var(--s3);justify-content:center;margin-top:var(--s5)}
+.tasbih-presets{display:flex;gap:var(--s2);justify-content:center;flex-wrap:wrap;padding:0 var(--s4)}
+
+/* Kalendar */
+.cal-head{display:flex;align-items:center;justify-content:space-between;padding:var(--s3) var(--s4) 0}
+.cal-head h3{margin:0;font-family:var(--font-display)}
+.cal-nav{width:2.3rem;height:2.3rem;border-radius:var(--r-full);display:grid;place-items:center;background:var(--chip-bg)}
+.cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:.2rem;padding:var(--s3) var(--s4) 0}
+.cal-grid .dow{font-size:.66rem;font-weight:600;color:var(--muted);text-align:center;padding:.3rem 0}
+.cal-day{
+  aspect-ratio:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.1rem;
+  border-radius:var(--r-md);font-size:.85rem;position:relative;transition:transform .12s;
+}
+.cal-day:active{transform:scale(.9)}
+.cal-day.dim{opacity:.32}
+.cal-day.today{box-shadow:inset 0 0 0 1.5px var(--gold)}
+.cal-day.sel{background:var(--olive-800);color:#fff}
+.cal-day .hij{font-size:.58rem;color:var(--muted)}
+.cal-day.sel .hij{color:#d5dac5}
+.cal-day .mark{position:absolute;bottom:.22rem;width:.3rem;height:.3rem;border-radius:50%}
+.cal-day .mark.period{background:var(--period)}
+.cal-day .mark.fast{background:var(--gold)}
+.cal-day .mark.pray{background:var(--ok)}
+.event-list{margin:var(--s3) var(--s4) 0}
+.event-row{display:flex;gap:var(--s3);align-items:flex-start;padding:var(--s3) 0;border-bottom:1px solid var(--hairline)}
+.event-row:last-child{border:0}
+.event-dot{width:.55rem;height:.55rem;border-radius:50%;background:var(--gold);margin-top:.4rem;flex:none}
+.event-row b{font-size:.9rem}
+.event-row .cap{font-size:.74rem;color:var(--muted)}
+
+/* Kompas */
+.compass-stage{padding:var(--s4);display:grid;place-items:center}
+.compass{width:16rem;height:16rem;border-radius:50%;position:relative;background:var(--surface);box-shadow:var(--shadow-lg),inset 0 0 0 1px var(--border)}
+.compass .dial{position:absolute;inset:1rem;transition:transform .12s linear}
+.compass .tick{position:absolute;left:50%;top:0;width:2px;height:.7rem;background:var(--hairline);transform-origin:50% 7rem;translate:-50% 0}
+.compass .tick.card{height:1.1rem;background:var(--muted)}
+.compass .lab{position:absolute;left:50%;top:1.1rem;transform-origin:50% 5.9rem;translate:-50% 0;font-size:.72rem;font-weight:700;color:var(--muted)}
+.compass .needle{position:absolute;inset:0;display:grid;place-items:center}
+.compass .kaaba{
+  width:3.4rem;height:3.4rem;border-radius:var(--r-md);background:var(--olive-900);display:grid;place-items:center;
+  box-shadow:0 0 0 .35rem rgb(182 157 116/.35);
+}
+.compass .kaaba i{width:1.4rem;height:1.4rem;background:var(--gold);border-radius:.25rem;box-shadow:inset 0 0 0 .2rem #2a2417}
+.compass-read{text-align:center;margin-top:var(--s4)}
+.compass-read b{font-family:var(--font-display);font-size:2rem;font-variant-numeric:tabular-nums}
+
+/* Borang */
+.form-card{margin:var(--s3) var(--s4) 0;padding:var(--s4)}
+.field{margin-bottom:var(--s3)}
+.field label{display:block;font-size:.78rem;font-weight:600;color:var(--muted);margin-bottom:.35rem}
+.field input,.field select{
+  width:100%;padding:.7rem .9rem;border-radius:var(--r-md);border:1px solid var(--border);
+  background:var(--bg);outline:none;font-size:.95rem;
+}
+.field input:focus{border-color:var(--gold)}
+.result-box{margin-top:var(--s3);padding:var(--s4);border-radius:var(--r-md);background:var(--wash);text-align:center}
+.dark .result-box{background:rgb(255 255 255/.05)}
+.result-box b{font-family:var(--font-display);font-size:1.6rem;display:block;margin-top:.2rem}
+
+/* ---------- 11. Debug mode ---------- */
+#debug-fab{
+  position:fixed;z-index:110;inset-inline-end:1rem;bottom:calc(var(--tabbar-h) + 2rem + env(safe-area-inset-bottom));
+  width:2.9rem;height:2.9rem;border-radius:50%;background:var(--dp-bg);color:var(--dp-ink);
+  display:grid;place-items:center;box-shadow:var(--shadow-lg);border:1px solid rgb(207 224 184/.25);
+  transition:transform .15s;
+}
+#debug-fab:active{transform:scale(.88)}
+#debug-panel{position:fixed;inset:0;z-index:130;background:rgb(10 12 7/.6);backdrop-filter:blur(4px);animation:fadeIn .2s}
+.dp-sheet{
+  position:absolute;left:50%;transform:translateX(-50%);bottom:0;width:min(100%,30rem);height:78dvh;
+  background:var(--dp-bg);color:var(--dp-ink);border-radius:var(--r-xl) var(--r-xl) 0 0;
+  display:flex;flex-direction:column;overflow:hidden;animation:sheetUp .35s var(--ease);
+  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.75rem;
+  box-shadow:0 -10px 50px rgb(0 0 0/.5);border:1px solid rgb(207 224 184/.18);border-bottom:0;
+}
+.dp-head{display:flex;align-items:center;gap:var(--s3);padding:var(--s3) var(--s4);border-bottom:1px solid rgb(207 224 184/.15);flex:none}
+.dp-head strong{font-family:var(--font-body);font-size:.9rem;letter-spacing:.03em}
+.dp-tabs{display:flex;gap:.15rem;margin-inline-start:auto;background:rgb(255 255 255/.06);border-radius:var(--r-full);padding:.18rem}
+.dp-tabs button{padding:.32rem .7rem;border-radius:var(--r-full);font-size:.68rem;color:var(--dp-dim);font-family:inherit}
+.dp-tabs button[aria-selected="true"]{background:rgb(207 224 184/.18);color:var(--dp-ink)}
+.dp-close{width:2rem;height:2rem;border-radius:50%;display:grid;place-items:center;color:var(--dp-dim)}
+.dp-close .ic{width:1rem;height:1rem}
+.dp-body{flex:1;overflow-y:auto;padding:var(--s3) var(--s4) calc(var(--s4) + env(safe-area-inset-bottom))}
+.dp-log{padding:.45rem 0;border-bottom:1px dashed rgb(207 224 184/.12);line-height:1.55;word-break:break-word;white-space:pre-wrap}
+.dp-log .t{color:var(--dp-dim);margin-inline-end:.5rem}
+.dp-log.warn{color:#e8c987}.dp-log.error{color:#ef9a8f}.dp-log.info{color:#a9c1e8}
+.dp-empty{color:var(--dp-dim);text-align:center;padding:2rem 0}
+.dp-pre{background:rgb(255 255 255/.05);border-radius:var(--r-md);padding:var(--s3);overflow-x:auto;white-space:pre;word-break:normal}
+.dp-kv{display:flex;justify-content:space-between;gap:1rem;padding:.4rem 0;border-bottom:1px dashed rgb(207 224 184/.12)}
+.dp-kv b{color:var(--dp-ink);font-weight:600;text-align:end;word-break:break-all}
+.dp-actions{display:grid;gap:var(--s2)}
+.dp-btn{
+  display:flex;align-items:center;gap:.6rem;padding:.75rem 1rem;border-radius:var(--r-md);
+  background:rgb(255 255 255/.06);color:var(--dp-ink);font-family:var(--font-body);font-size:.85rem;font-weight:500;
+  text-align:start;border:1px solid rgb(207 224 184/.12);
+}
+.dp-btn:active{background:rgb(255 255 255/.12)}
+.dp-btn.danger{color:#ef9a8f;border-color:rgb(239 154 143/.3)}
+.dp-btn .ic{width:1.05rem;height:1.05rem}
+.dp-badge{display:inline-block;padding:.1rem .5rem;border-radius:var(--r-full);background:rgb(207 224 184/.15);font-size:.62rem;margin-inline-start:.4rem}
+
+/* ---------- 12. Gerak & akses ---------- */
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}
+  .reveal{opacity:1;transform:none}
+}
