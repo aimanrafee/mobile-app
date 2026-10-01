@@ -1,0 +1,153 @@
+{
+  "versi": "1.0",
+  "tajuk": "Asbab Nuzul",
+  "penerangan": "Rujukan ringkas sebab-sebab turunnya ayat/surah (asbab al-nuzul). Dikumpul daripada kitab-kitab tafsir dan asbab al-nuzul klasik. Nota: Sesetengah riwayat mempunyai perbezaan pendapat; dipilih yang paling masyhur.",
+  "peringatan": "Asbab nuzul membantu memahami konteks ayat. Ia bukan satu-satunya petunjuk makna — ayat juga ditafsirkan mengikut umum lafaz dan prinsip usul tafsir.",
+  "asbab": [
+    {
+      "kunci": "surah:2",
+      "jenis": "surah",
+      "surah": 2,
+      "tajuk": "Al-Baqarah",
+      "teks": "Surah Al-Baqarah merupakan surah Madaniyyah yang panjang. Ayat-ayatnya diturunkan dalam tempoh berbeza di Madinah, kebanyakannya berkaitan pembinaan masyarakat Islam, hukum-hukum, hubungan dengan Ahli Kitab dan munafik, serta larangan riba. Tiada satu peristiwa tunggal yang menjadi sebab turun keseluruhan surah; surah ini turun berperingkat sepanjang zaman Madinah.",
+      "sumber": "Al-Itqan fi Ulum al-Quran"
+    },
+    {
+      "kunci": "surah:8",
+      "jenis": "surah",
+      "surah": 8,
+      "tajuk": "Al-Anfal",
+      "teks": "Surah Al-Anfal diturunkan berkaitan Perang Badar (2H). Ayat pertama tentang pembahagian harta rampasan perang (anfal) diturunkan selepas perselisihan sahabat tentang pembahagian harta rampasan Perang Badar.",
+      "sumber": "Tafsir al-Tabari; Asbab al-Nuzul al-Wahidi"
+    },
+    {
+      "kunci": "surah:17",
+      "jenis": "surah",
+      "surah": 17,
+      "tajuk": "Al-Isra",
+      "teks": "Surah Al-Isra' (Perjalanan Malam) berkaitan peristiwa Israk dan Mikraj Nabi SAW dari Masjid al-Haram ke Masjid al-Aqsa dan ke Sidratul Muntaha. Pada malam tersebut turun perintah solat lima waktu. Surah ini juga dinamakan Bani Israil kerana memuatkan kisah mereka.",
+      "sumber": "Sahih al-Bukhari; Tafsir Ibn Kathir"
+    },
+    {
+      "kunci": "surah:18",
+      "jenis": "surah",
+      "surah": 18,
+      "tajuk": "Al-Kahf",
+      "teks": "Surah Al-Kahf diturunkan sebagai jawapan kepada soalan Ahli Kitab yang dikemukakan oleh musyrikin Makkah untuk menguji Nabi SAW. Mereka bertanya tentang pemuda Ashabul Kahfi, Zulqarnain, dan roh. Maka turunlah surah ini dengan kisah-kisah tersebut sebagai bukti kerasulan dan peringatan.",
+      "sumber": "Tafsir Ibn Kathir; Asbab al-Nuzul al-Wahidi"
+    },
+    {
+      "kunci": "surah:19",
+      "jenis": "surah",
+      "surah": 19,
+      "tajuk": "Maryam",
+      "teks": "Surah Maryam diturunkan sebagai jawapan kepada delegasi Kristian Najran yang datang berhujah tentang kedudukan Nabi Isa a.s. Allah menurunkan surah ini untuk menceritakan kisah Maryam dan Isa dengan jelas sebagai bantahan terhadap dakwaan Isa sebagai anak Tuhan.",
+      "sumber": "Tafsir Ibn Kathir"
+    },
+    {
+      "kunci": "surah:33",
+      "jenis": "surah",
+      "surah": 33,
+      "tajuk": "Al-Ahzab",
+      "teks": "Surah Al-Ahzab diturunkan berkaitan Perang Khandaq (Perang Ahzab) pada tahun 5H, ketika kaum musyrikin dan puak-puak bersekutu mengepung Madinah. Ayat-ayatnya membicarakan keadaan munafik, ketabahan mukmin, serta hukum-hukum berkaitan rumah tangga Nabi SAW.",
+      "sumber": "Tafsir al-Tabari; al-Sirah al-Nabawiyyah"
+    },
+    {
+      "kunci": "surah:36",
+      "jenis": "surah",
+      "surah": 36,
+      "tajuk": "Ya-Sin",
+      "teks": "Surah Ya-Sin tidak mempunyai asbab nuzul khusus bagi keseluruhan surah. Ia surah Makkiyyah yang menegaskan kerasulan, kebangkitan dan hari akhirat. Ayat 82 (perintah 'Kun' — jadilah) menegaskan kekuasaan Allah mencipta tanpa susah payah.",
+      "sumber": "Tafsir Ibn Kathir"
+    },
+    {
+      "kunci": "surah:55",
+      "jenis": "surah",
+      "surah": 55,
+      "tajuk": "Ar-Rahman",
+      "teks": "Surah Ar-Rahman menegaskan nikmat-nikmat Allah yang tidak terhitung kepada manusia dan jin. Tiada peristiwa khusus sebagai sebab turun surah ini. Ayat-ayatnya yang berulang 'Maka nikmat Tuhan kamu yang manakah yang kamu dustakan?' mengajak manusia dan jin menginsafi nikmat Allah.",
+      "sumber": "Tafsir Ibn Kathir"
+    },
+    {
+      "kunci": "surah:105",
+      "jenis": "surah",
+      "surah": 105,
+      "tajuk": "Al-Fil",
+      "teks": "Surah Al-Fil menceritakan peristiwa serangan Abrahah al-Asyram ke atas Kaabah dengan pasukan bergajah pada tahun kelahiran Nabi SAW (Tahun Gajah). Allah membinasakan pasukan tersebut dengan burung ababil yang melempar mereka dengan batu daripada tanah liat yang terbakar.",
+      "sumber": "Tafsir Ibn Kathir; al-Sirah al-Nabawiyyah"
+    },
+    {
+      "kunci": "surah:106",
+      "jenis": "surah",
+      "surah": 106,
+      "tajuk": "Quraysh",
+      "teks": "Surah Quraysh berkaitan nikmat keselamatan dan perjalanan perdagangan kaum Quraysh (musim sejuk ke Yaman dan musim panas ke Syam). Mereka diperintahkan mensyukuri nikmat tersebut dengan menyembah Allah Tuhan Kaabah sahaja.",
+      "sumber": "Tafsir Ibn Kathir"
+    },
+    {
+      "kunci": "surah:107",
+      "jenis": "surah",
+      "surah": 107,
+      "tajuk": "Al-Ma'un",
+      "teks": "Surah Al-Ma'un mengecam mereka yang mendustakan agama dan menolak membantu anak yatim dan orang miskin. Diriwayatkan ia berkaitan golongan munafik yang menunjuk-nunjuk solat tetapi lalai daripadanya.",
+      "sumber": "Tafsir Ibn Kathir"
+    },
+    {
+      "kunci": "surah:108",
+      "jenis": "surah",
+      "surah": 108,
+      "tajuk": "Al-Kawthar",
+      "teks": "Surah Al-Kawthar diturunkan sebagai jawapan kepada orang yang menghina Nabi SAW kerana kematian anak-anak lelakinya dan berkata beliau 'terputus keturunan'. Allah menegaskan bahawa Dia menganugerahkan Al-Kawthar (sungai di syurga dan kebaikan yang banyak) kepada Nabi SAW.",
+      "sumber": "Asbab al-Nuzul al-Wahidi; Tafsir Ibn Kathir"
+    },
+    {
+      "kunci": "surah:109",
+      "jenis": "surah",
+      "surah": 109,
+      "tajuk": "Al-Kafirun",
+      "teks": "Surah Al-Kafirun diturunkan apabila kaum Quraisy mencadangkan kompromi kepada Nabi SAW: menyembah berhala mereka setahun, dan mereka menyembah Allah setahun. Allah menolak sebarang kompromi dalam akidah dan menegaskan perpisahan agama.",
+      "sumber": "Asbab al-Nuzul al-Wahidi"
+    },
+    {
+      "kunci": "surah:111",
+      "jenis": "surah",
+      "surah": 111,
+      "tajuk": "Al-Masad",
+      "teks": "Surah Al-Masad diturunkan berkaitan Abu Lahab, bapa saudara Nabi SAW yang sangat memusuhi Islam. Ketika Nabi SAW menyeru kaumnya secara terbuka, Abu Lahab berkata 'Celakalah kamu'. Maka turunlah surah ini mengecam Abu Lahab dan isterinya.",
+      "sumber": "Sahih al-Bukhari; Tafsir Ibn Kathir"
+    },
+    {
+      "kunci": "surah:112",
+      "jenis": "surah",
+      "surah": 112,
+      "tajuk": "Al-Ikhlas",
+      "teks": "Surah Al-Ikhlas turun sebagai jawapan kepada soalan orang-orang musyrik tentang sifat Allah: 'Wahai Muhammad, terangkan kepada kami nasab (keturunan) Tuhanmu'. Maka turunlah 'Qul Huwallahu Ahad' yang menegaskan keesaan Allah. Surah ini setara dengan satu pertiga Al-Quran.",
+      "sumber": "Tafsir Ibn Kathir; Musnad Ahmad"
+    },
+    {
+      "kunci": "surah:113",
+      "jenis": "surah",
+      "surah": 113,
+      "tajuk": "Al-Falaq",
+      "teks": "Surah Al-Falaq dan An-Nas (Al-Mu'awwidhatain) diturunkan sebagai perlindungan daripada gangguan sihir, hasad dengki dan kejahatan makhluk. Diriwayatkan berkaitan peristiwa sihir yang ditujukan kepada Nabi SAW; kedua-dua surah ini menjadi penawar.",
+      "sumber": "Sahih al-Bukhari; Sahih Muslim"
+    },
+    {
+      "kunci": "surah:114",
+      "jenis": "surah",
+      "surah": 114,
+      "tajuk": "An-Nas",
+      "teks": "Surah An-Nas bersama Al-Falaq diturunkan sebagai perlindungan daripada gangguan syaitan daripada kalangan jin dan manusia, serta daripada bisikan yang menusuk hati. Ia adalah surah penutup Al-Quran.",
+      "sumber": "Sahih al-Bukhari; Sahih Muslim"
+    },
+    {
+      "kunci": "ayat:2:255",
+      "jenis": "ayat",
+      "surah": 2,
+      "ayat": 255,
+      "tajuk": "Ayat Kursi",
+      "teks": "Ayat Kursi (2:255) adalah ayat paling agung dalam Al-Quran. Nabi SAW bertanya kepada Ubay bin Ka'ab tentang ayat paling agung, lalu Ubay menyebut Ayat Kursi. Diriwayatkan Rasulullah SAW bersabda yang bermaksud: 'Ia mempunyai lidah dan dua bibir yang memuliakan Allah di sisi Arasy'.",
+      "sumber": "Sahih Muslim; Tafsir Ibn Kathir"
+    }
+  ]
+}

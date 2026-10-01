@@ -1,0 +1,311 @@
+{
+  "versi": "1.0",
+  "tajuk": "Pilihan Kitab Tafsir",
+  "penerangan": "Rujukan ringkas mengenai kitab-kitab tafsir al-Quran yang dikelompokkan mengikut peranan: tafsir utama (klasik), tafsir popular, tafsir kontemporari, dan tafsir yang diajarkan di masjid-masjid di Malaysia masa kini. Setiap kad boleh diklik untuk melihat maklumat lanjut.",
+  "kategori": [
+    {
+      "kunci": "tafsir_utama",
+      "nama": "Tafsir Utama (Klasik)",
+      "penerangan": "Kitab-kitab tafsir klasik yang menjadi rujukan utama umat Islam sepanjang zaman. Kebanyakannya ditulis dalam Bahasa Arab dan menjadi sumber kepada tafsir-tafsir kemudian.",
+      "senarai": [
+        {
+          "no": 1,
+          "nama": "Tafsir al-Tabari",
+          "nama_arab": "جامع البيان عن تأويل آي القرآن",
+          "penulis": "Imam Abu Ja'far Muhammad bin Jarir al-Tabari",
+          "tahun": "310H",
+          "bahasa": "Arab",
+          "metodologi": "bi al-Ma'thur",
+          "ciri": "Tafsir terlengkap daripada kurun ketiga; menghimpun riwayat tafsir daripada para sahabat dan tabi'in lengkap dengan sanad, turut mencatat perbezaan qiraat dan hujah bahasa Arab.",
+          "kelebihan": "Rujukan pertama dalam kajian tafsir bi al-ma'thur; menjadi sumber utama kepada tafsir-tafsir selepasnya.",
+          "terjemahan_melayu": false
+        },
+        {
+          "no": 2,
+          "nama": "Tafsir Ibn Kathir",
+          "nama_arab": "تفسير القرآن العظيم",
+          "penulis": "al-Hafiz 'Imad al-Din Abu al-Fida' Ismail bin Kathir al-Dimasyqi",
+          "tahun": "774H",
+          "bahasa": "Arab",
+          "metodologi": "bi al-Ma'thur",
+          "ciri": "Tafsir bi al-ma'thur paling terkenal; menghuraikan ayat dengan ayat lain, hadis sahih, athar sahabat dan tabi'in dengan gaya yang jelas dan mudah diikuti.",
+          "kelebihan": "Menjadi tafsir yang paling banyak diterjemah dan diajar di seluruh dunia Islam termasuk Malaysia.",
+          "terjemahan_melayu": true
+        },
+        {
+          "no": 3,
+          "nama": "Tafsir al-Qurtubi",
+          "nama_arab": "الجامع لأحكام القرآن",
+          "penulis": "Imam Muhammad bin Ahmad al-Ansari al-Qurtubi",
+          "tahun": "671H",
+          "bahasa": "Arab",
+          "metodologi": "Ahkam & Fiqh",
+          "ciri": "Tafsir yang menumpukan aspek hukum dan fiqh, turut membincangkan munasabah ayat, bacaan qiraat dan ilmu bahasa.",
+          "kelebihan": "Rujukan utama bagi hukum-hakam yang digali daripada al-Quran; digelar Jami' al-Ahkam.",
+          "terjemahan_melayu": true
+        },
+        {
+          "no": 4,
+          "nama": "Tafsir al-Baghawi",
+          "nama_arab": "معالم التنزيل",
+          "penulis": "Imam al-Husain bin Mas'ud al-Baghawi",
+          "tahun": "516H",
+          "bahasa": "Arab",
+          "metodologi": "bi al-Ma'thur (ringkas)",
+          "ciri": "Tafsir ringkas berasaskan riwayat dengan bahasa mudah; meringkaskan isi daripada al-Tabari dan al-Tha'labi.",
+          "kelebihan": "Sesuai untuk pengajian tafsir peringkat asas kerana padat dan mudah difahami.",
+          "terjemahan_melayu": false
+        },
+        {
+          "no": 5,
+          "nama": "Tafsir al-Jalalayn",
+          "nama_arab": "تفسير الجلالين",
+          "penulis": "Jalaluddin al-Mahalli & Jalaluddin al-Suyuti",
+          "tahun": "911H",
+          "bahasa": "Arab",
+          "metodologi": "Ijmal (ringkas)",
+          "ciri": "Tafsir ringkas dan padat yang menulis makna dalam gaya singkat; sebahagian besarnya oleh al-Mahalli, diselesaikan oleh al-Suyuti.",
+          "kelebihan": "Amat popular dalam pengajian asas tafsir; banyak dicetak bersama al-Quran di rantau ini.",
+          "terjemahan_melayu": true
+        },
+        {
+          "no": 6,
+          "nama": "Tafsir al-Razi",
+          "nama_arab": "مفاتيح الغيب",
+          "penulis": "Imam Fakhr al-Din Muhammad bin 'Umar al-Razi",
+          "tahun": "606H",
+          "bahasa": "Arab",
+          "metodologi": "bi al-Ma'qul",
+          "ciri": "Tafsir yang sangat luas dengan pendekatan rasional, falsafah, ilmu kalam dan perbahasan bahasa yang mendalam.",
+          "kelebihan": "Digelar Tafsir al-Kabir; kaya dengan hujah akal dan perbandingan mazhab.",
+          "terjemahan_melayu": false
+        }
+      ]
+    },
+    {
+      "kunci": "tafsir_popular",
+      "nama": "Tafsir Popular",
+      "penerangan": "Tafsir-tafsir yang sangat terkenal dan banyak dibaca masyarakat kerana gaya bahasa yang mudah, ringkas dan praktikal.",
+      "senarai": [
+        {
+          "no": 1,
+          "nama": "Tafsir al-Sa'di",
+          "nama_arab": "تيسير الكريم الرحمن في تفسير كلام المنان",
+          "penulis": "Syeikh 'Abd al-Rahman bin Nasir al-Sa'di",
+          "tahun": "1376H",
+          "bahasa": "Arab",
+          "metodologi": "Islah & Tatbiq",
+          "ciri": "Bahasa sangat mudah dan indah; menekankan makna langsung, pengambilan faedah, akidah dan akhlak.",
+          "kelebihan": "Sangat popular sebagai tafsir ringkas; kini banyak terjemahan Melayu untuk pengajian masjid dan surau.",
+          "terjemahan_melayu": true
+        },
+        {
+          "no": 2,
+          "nama": "Tafsir Fi Zilal al-Qur'an",
+          "nama_arab": "في ظلال القرآن",
+          "penulis": "Sayyid Qutb",
+          "tahun": "1386H",
+          "bahasa": "Arab",
+          "metodologi": "Haraki & Tarbawi",
+          "ciri": "Tafsir kontemporari dengan gaya sastera tinggi; menonjolkan pandangan dunia al-Quran, tauhid, perjuangan dan tarbiah.",
+          "kelebihan": "Antara tafsir paling berpengaruh pada abad ke-20; diterjemah ke pelbagai bahasa termasuk Melayu.",
+          "terjemahan_melayu": true
+        },
+        {
+          "no": 3,
+          "nama": "Tafsir al-Maraghi",
+          "nama_arab": "تفسير المراغي",
+          "penulis": "Syeikh Ahmad Mustafa al-Maraghi",
+          "tahun": "1371H",
+          "bahasa": "Arab",
+          "metodologi": "Tahlili tematik",
+          "ciri": "Gaya bahasa sederhana; menghuraikan ayat dengan susunan tema, dilengkapi latar sosial dan hukum.",
+          "kelebihan": "Tafsir Mesir yang banyak digunakan dalam kurikulum; terjemahan Melayunya mudah didapati.",
+          "terjemahan_melayu": true
+        },
+        {
+          "no": 4,
+          "nama": "Tafsir al-Azhar",
+          "nama_arab": "تفسير الأزهر",
+          "penulis": "Prof. Dr. Haji Abdul Malik Karim Amrullah (Hamka)",
+          "tahun": "1402H / 1981M",
+          "bahasa": "Melayu",
+          "metodologi": "Adabi wa Ijtima'i",
+          "ciri": "Ditulis dalam Bahasa Melayu-Indonesia dengan gaya yang hidup; menghubungkan ayat dengan realiti masyarakat Nusantara.",
+          "kelebihan": "Tafsir bahasa Melayu paling berpengaruh di Nusantara; kerap dirujuk dalam kuliah di Malaysia.",
+          "terjemahan_melayu": true
+        },
+        {
+          "no": 5,
+          "nama": "Tafsir al-Mishbah",
+          "nama_arab": "تفسير المصباح",
+          "penulis": "Prof. Dr. M. Quraish Shihab",
+          "tahun": "1424H / 2003M",
+          "bahasa": "Indonesia",
+          "metodologi": "Tahlili tematik",
+          "ciri": "Tafsir Nusantara yang terperinci dengan pendekatan bahasa, sejarah dan maqasid; gaya santun dan mudah.",
+          "kelebihan": "Paling banyak dibaca di rantau Melayu-Indonesia; sesuai untuk perbahasan mendalam dalam halaqah.",
+          "terjemahan_melayu": true
+        }
+      ]
+    },
+    {
+      "kunci": "tafsir_kontemporari",
+      "nama": "Tafsir Kontemporari",
+      "penerangan": "Tafsir-tafsir zaman moden yang menggabungkan warisan klasik dengan isu-isu semasa, kaedah bahasa baru dan maqasid.",
+      "senarai": [
+        {
+          "no": 1,
+          "nama": "Tafsir al-Munir",
+          "nama_arab": "المنير في العقيدة والشريعة والمنهج",
+          "penulis": "Prof. Dr. Wahbah al-Zuhayli",
+          "tahun": "1432H / 2011M",
+          "bahasa": "Arab",
+          "metodologi": "Fiqh semasa",
+          "ciri": "Gabungan tafsir klasik dengan perbahasan fiqh dan isu-isu kontemporari; susunan kemas dan rujukan luas.",
+          "kelebihan": "Rujukan kegemaran pelajar dan penceramah kerana padat dengan hukum dan isu zaman ini.",
+          "terjemahan_melayu": true
+        },
+        {
+          "no": 2,
+          "nama": "Tafsir al-Tahrir wa al-Tanwir",
+          "nama_arab": "التحرير والتنوير",
+          "penulis": "Muhammad al-Tahir Ibn 'Ashur",
+          "tahun": "1393H",
+          "bahasa": "Arab",
+          "metodologi": "Maqasid & Balaghah",
+          "ciri": "Tafsir Maghribi yang mendalam dalam ilmu balaghah, bahasa dan maqasid syariah; dianggap antara tafsir paling ilmiah zaman moden.",
+          "kelebihan": "Kaya dengan analisis bahasa dan tujuan-tujuan syarak.",
+          "terjemahan_melayu": false
+        },
+        {
+          "no": 3,
+          "nama": "Tafsir al-Wasit",
+          "nama_arab": "الوسيط في تفسير القرآن المجيد",
+          "penulis": "Syeikh Muhammad Sayyid Tantawi",
+          "tahun": "1431H / 2010M",
+          "bahasa": "Arab",
+          "metodologi": "Wasat (pertengahan)",
+          "ciri": "Tafsir ringkas-sederhana yang dikeluarkan untuk tujuan dakwah; bahasa jelas sesuai untuk segenap lapisan.",
+          "kelebihan": "Tafsir rasmi yang mudah difahami; sering dijadikan bahan ceramah.",
+          "terjemahan_melayu": true
+        },
+        {
+          "no": 4,
+          "nama": "Tafsir al-Muyassar",
+          "nama_arab": "التفسير الميسر",
+          "penulis": "Majma' al-Malik Fahd (Kementerian Hal Ehwal Islam Arab Saudi)",
+          "tahun": "1430H (2009)",
+          "bahasa": "Arab",
+          "metodologi": "Ringkasan rasmi",
+          "ciri": "Ringkasan tafsir rasmi yang jelas dan mudah; diterbitkan untuk memudahkan kefahaman ayat bagi khalayak umum.",
+          "kelebihan": "Banyak digunakan dalam cetakan al-Quran moden dan portal tafsir dalam talian.",
+          "terjemahan_melayu": true
+        },
+        {
+          "no": 5,
+          "nama": "Tafsir al-Mukhtasar",
+          "nama_arab": "التفسير المختصر",
+          "penulis": "Markaz Tafsir li al-Dirasat al-Qur'aniyyah (Madinah)",
+          "tahun": "1435H (2014)",
+          "bahasa": "Arab",
+          "metodologi": "Ikhtisar kontemporari",
+          "ciri": "Tafsir ringkas yang disusun panel ulama dengan menjaga akidah dan kesahihan riwayat; amat padat.",
+          "kelebihan": "Ringkas dan tepat; sesuai untuk bacaan pantas sebelum khutbah atau ceramah.",
+          "terjemahan_melayu": true
+        }
+      ]
+    },
+    {
+      "kunci": "tafsir_masjid_malaysia",
+      "nama": "Diajarkan di Masjid-Masjid Malaysia Masa Kini",
+      "penerangan": "Tafsir-tafsir yang lazim menjadi bahan kuliah dan pengajian di masjid, surau serta pusat pengajian di Malaysia pada masa kini, kebanyakannya dalam bentuk terjemahan Melayu.",
+      "senarai": [
+        {
+          "no": 1,
+          "nama": "Tafsir Pimpinan al-Rahman kepada Pengertian Al-Quran",
+          "nama_arab": "تفسير قيادة الرحمن",
+          "penulis": "Adaptasi daripada Tafsir Ibn Kathir oleh ulama Malaysia (terbitan Yayasan Dakwah Islamiah Malaysia)",
+          "tahun": "Cetakan awal 1960-an",
+          "bahasa": "Melayu",
+          "metodologi": "bi al-Ma'thur (ringkas)",
+          "ciri": "Terjemahan-adaptasi Melayu yang sangat ringkas dan mudah, banyak digunakan oleh JAKIM, YADIM, masjid dan surau di seluruh negara serta sekolah agama.",
+          "kegunaan": "Menjadi teks utama kuliah tafsir dan pengajian mingguan di kebanyakan masjid di Malaysia.",
+          "terjemahan_melayu": true
+        },
+        {
+          "no": 2,
+          "nama": "Tafsir Ibn Kathir — Terjemahan Melayu",
+          "nama_arab": "تفسير القرآن العظيم (ترجمة ملايوية)",
+          "penulis": "al-Hafiz Ibn Kathir (terjemahan meluas, contohnya terbitan Pustaka Imam asy-Syafi'i)",
+          "tahun": "774H / terjemahan moden",
+          "bahasa": "Melayu",
+          "metodologi": "bi al-Ma'thur",
+          "ciri": "Terjemahan lengkap Tafsir Ibn Kathir dalam beberapa jilid; lazim dijadikan rujukan utama imam dan ustaz.",
+          "kegunaan": "Rujukan utama dalam kuliah tafsir yang dikendalikan imam dan penceramah jemputan di masjid.",
+          "terjemahan_melayu": true
+        },
+        {
+          "no": 3,
+          "nama": "Tafsir al-Maraghi — Terjemahan Melayu",
+          "nama_arab": "تفسير المراغي (ترجمة ملايوية)",
+          "penulis": "Syeikh Ahmad Mustafa al-Maraghi (terjemahan Melayu)",
+          "tahun": "1371H / terjemahan moden",
+          "bahasa": "Melayu",
+          "metodologi": "Tahlili tematik",
+          "ciri": "Bahasa mudah dan susunan tematik menjadikannya pilihan pengajian tafsir peringkat menengah di Malaysia.",
+          "kegunaan": "Sering digunakan dalam kelas tafsir di masjid, surau dan maahad tahfiz.",
+          "terjemahan_melayu": true
+        },
+        {
+          "no": 4,
+          "nama": "Tafsir Fi Zilal al-Qur'an — Terjemahan Melayu",
+          "nama_arab": "في ظلال القرآن (ترجمة ملايوية)",
+          "penulis": "Sayyid Qutb (terjemahan Melayu)",
+          "tahun": "1386H / terjemahan moden",
+          "bahasa": "Melayu",
+          "metodologi": "Haraki & Tarbawi",
+          "ciri": "Terjemahan penuh Fi Zilal; memupuk penghayatan ayat dalam konteks perjuangan dan tarbiah.",
+          "kegunaan": "Popular dalam pengajian dan usrah di kalangan gerakan Islam serta halaqah masjid.",
+          "terjemahan_melayu": true
+        },
+        {
+          "no": 5,
+          "nama": "Tafsir al-Jalalayn — Edisi Melayu",
+          "nama_arab": "تفسير الجلالين مع ترجمته",
+          "penulis": "Jalaluddin al-Mahalli & Jalaluddin al-Suyuti (edisi Melayu)",
+          "tahun": "911H / edisi moden",
+          "bahasa": "Arab + catatan Melayu",
+          "metodologi": "Ijmal (ringkas)",
+          "ciri": "Ringkas dan padat; banyak dicetak bersama terjemahan, sesuai untuk kelas tafsir asas di masjid.",
+          "kegunaan": "Bahan asas dalam kelas tafsir ringkas untuk jemaah baharu dan pelajar.",
+          "terjemahan_melayu": true
+        },
+        {
+          "no": 6,
+          "nama": "Tafsir al-Sa'di — Terjemahan Melayu",
+          "nama_arab": "تيسير الكريم الرحمن (ترجمة ملايوية)",
+          "penulis": "Syeikh 'Abd al-Rahman bin Nasir al-Sa'di (terjemahan Melayu)",
+          "tahun": "1376H / terjemahan moden",
+          "bahasa": "Melayu",
+          "metodologi": "Islah & Tatbiq",
+          "ciri": "Terjemahan yang semakin meluas; gaya ringkas dan penuh faedah menjadikannya mudah diikuti jemaah.",
+          "kegunaan": "Kian popular dalam kuliah subuh dan pengajian mingguan masjid.",
+          "terjemahan_melayu": true
+        },
+        {
+          "no": 7,
+          "nama": "Tafsir Ringkas Al-Quran (Terjemahan al-Muyassar)",
+          "nama_arab": "التفسير الميسر (ترجمة ملايوية)",
+          "penulis": "Terjemahan Melayu Tafsir al-Muyassar oleh pihak berkuasa agama",
+          "tahun": "1430H (2009) / terjemahan moden",
+          "bahasa": "Melayu",
+          "metodologi": "Ringkasan rasmi",
+          "ciri": "Ringkasan rasmi yang jelas dan mudah; diedarkan untuk memudahkan kefahaman ayat bagi kariah.",
+          "kegunaan": "Bahan bantu dalam ceramah, takmir dan kuliah masjid masa kini.",
+          "terjemahan_melayu": true
+        }
+      ]
+    }
+  ]
+}

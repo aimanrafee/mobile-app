@@ -1,0 +1,36 @@
+{
+  "versi": "1.0",
+  "penerangan": "Waqaf & Ibtida' — berhenti & memulai semula bacaan agar makna ayat tidak rosak.",
+  "jenis": [
+    { "nama": "Waqaf Tamm (Sempurna)", "huruf": "—", "penerangan": "Berhenti pada akhir ayat atau pada kalam yang sempurna dan tidak berkaitan dengan lafaz selepasnya dari segi makna mahupun nahu. Amat digalakkan." },
+    { "nama": "Waqaf Kafi (Mencukupi)", "huruf": "—", "penerangan": "Berhenti pada kalam yang sempurna maknanya tetapi masih ada kaitan makna dengan selepasnya (walaupun tiada kaitan lafaz). Makna tidak rosak." },
+    { "nama": "Waqaf Hasan (Baik)", "huruf": "—", "penerangan": "Berhenti pada kalam yang lengkap dari segi lafaz dan makna, tetapi masih berkait rapat dengan selepasnya. Makna tidak rosak tetapi lebih elok bersambung." },
+    { "nama": "Waqaf Qabih (Buruk)", "huruf": "—", "penerangan": "Berhenti pada tempat yang merosakkan makna atau menyebabkan salah faham, cth. berhenti di tengah-tengah ayat yang masih berkait. Wajib dielak." }
+  ],
+  "tanda": [
+    { "tanda": "م", "nama": "Waqaf Lazim", "penerangan": "Wajib berhenti (biasanya di penghujung ayat atau tempat yang maknanya hanya lengkap bila berhenti)." },
+    { "tanda": "ج", "nama": "Waqaf Jaiz", "penerangan": "Boleh berhenti atau bersambung; kedua-duanya dibenarkan." },
+    { "tanda": "صلى", "nama": "Waqaf Jaiz dengan Wasl Aula", "penerangan": "Boleh berhenti tetapi bersambung lebih utama (wasl aula)." },
+    { "tanda": "قلى", "nama": "Waqaf Jaiz dengan Waqaf Aula", "penerangan": "Boleh bersambung tetapi berhenti lebih utama (waqaf aula)." },
+    { "tanda": "لا", "nama": "La Waqf", "penerangan": "Tidak boleh berhenti di sini (kerana akan merosakkan makna); teruskan bacaan." },
+    { "tanda": "س", "nama": "Saktah", "penerangan": "Berhenti seketika tanpa bernafas (saktah) sebelum meneruskan bacaan." },
+    { "tanda": "∴", "nama": "Waqaf Mu'anaqah", "penerangan": "Tanda tiga titik: berhenti di salah satu tempat sahaja, tidak boleh di kedua-duanya." }
+  ],
+  "ibtida": [
+    { "tajuk": "Ibtida' dengan Kata Bermula Hamzah", "teks": "Memulai bacaan pada kata yang bermula dengan hamzah wasal (selepas lam ta'rif atau kata tertentu) dengan fathah kasrah dhammah mengikut keadaan." },
+    { "tajuk": "Ibtida' Selepas Waqaf", "teks": "Sebaiknya memulai dengan kata yang sempurna maknanya (biasanya dari permulaan ayat) dan elak memulai pada separuh kata atau kata yang terpisah maknanya." },
+    { "tajuk": "Ibtida' pada Huruf Mad", "teks": "Jika mula pada kata yang bermula dengan huruf mad, panjangkan mad mengikut kadar aslinya tanpa mengubah makna." },
+    { "tajuk": "Elakkan Lahn", "teks": "Pastikan baris akhir (i'rab) betul ketika ibtida' kerana kesalahan baris ialah lahn jaliy yang mengubah makna dan merosakkan bacaan tartil." }
+  ],
+  "markah": [
+    { "kodi": "6D6", "tanda": "ۖ", "nama": "Waqaf Jaiz", "penerangan": "Boleh berhenti atau bersambung; kedua-duanya dibenarkan (sama dengan tanda ج)." },
+    { "kodi": "6D7", "tanda": "ۗ", "nama": "Waqaf Aula (Waqaf Lebih Utama)", "penerangan": "Berhenti dibenarkan tetapi bersambung lebih utama; makna tidak rosak sama ada berhenti atau sambung." },
+    { "kodi": "6D8", "tanda": "ۘ", "nama": "Waqaf Lazim (M)", "penerangan": "Wajib berhenti; biasanya di penghujung ayat atau tempat yang maknanya hanya lengkap bila berhenti." },
+    { "kodi": "6D9", "tanda": "ۙ", "nama": "Saktah (S)", "penerangan": "Berhenti seketika tanpa bernafas (saktah) sebelum meneruskan bacaan." },
+    { "kodi": "6DA", "tanda": "ۚ", "nama": "Waqaf Jaiz (J)", "penerangan": "Boleh berhenti atau bersambung; kedua-duanya dibenarkan." },
+    { "kodi": "6DB", "tanda": "ۛ", "nama": "Waqaf Mu'anaqah (∴)", "penerangan": "Berhenti di salah satu tempat sahaja (bertanda ۛ), tidak boleh di kedua-duanya." },
+    { "kodi": "6DC", "tanda": "ۜ", "nama": "Waqaf Jaiz (rujukan mushaf)", "penerangan": "Boleh berhenti; rujuk mushaf untuk tanda sebenar pada kedudukan ini." },
+    { "kodi": "6E9", "tanda": "۩", "nama": "Tanda Sajdah", "penerangan": "Tempat sujud tilawah; disunatkan sujud apabila membacanya." }
+  ],
+  "catatan": "Dalam Mushaf Uthmani, tanda waqaf biasanya kecil di atas perkataan. Rujuk mushaf rasm Uthmani untuk tanda sebenar pada setiap ayat."
+}

@@ -1,0 +1,108 @@
+{
+  "versi": "1.0",
+  "tajuk": "Adab Tilawah & Isti'adzah",
+  "penerangan": "Rujukan lengkap adab membaca Al-Quran (adab tilawah) merangkumi kesucian diri dan tempat, isti'adzah & basmalah, adab semasa membaca, tartil & suara yang baik, doa khatam, dan panduan menghormati mushaf. Dikumpul daripada sumber-sumber hadis dan kitab-kitab klasik.",
+  "peringatan": "Adab tilawah adalah tuntutan kesempurnaan amalan membaca Al-Quran. Utamakan kebersihan hati dan kekhusyukan; adab zahir adalah cerminan adab batin.",
+  "kategori": [
+    {
+      "nama": "Adab Sebelum Membaca",
+      "penerangan": "Persediaan diri dan tempat sebelum memulakan tilawah Al-Quran.",
+      "senarai": [
+        {
+          "tajuk": "Bersuci daripada hadas dan najis",
+          "teks": "Disunatkan bersuci daripada hadas kecil (berwuduk) dan hadas besar (mandi wajib) sebelum membaca Al-Quran. Al-Quran adalah kalam Allah yang mulia, maka membacanya dalam keadaan bersih adalah lebih utama dan lebih menghormati.",
+          "dalil": "Allah berfirman: \"Sesungguhnya ia (Al-Quran) itu, sungguh-sungguh mulia... tidak menyentuhnya kecuali orang-orang yang disucikan.\" (Al-Waqi'ah 56:77-79).",
+          "sumber": "Tafsir Ibn Kathir; Fiqh al-Tilawah"
+        },
+        {
+          "tajuk": "Menyucikan tempat dan pakaian",
+          "teks": "Pastikan tempat duduk, pakaian dan persekitaran bersih daripada najis. Memilih tempat yang bersih dan tenang membantu kekhusyukan dalam membaca."
+        },
+        {
+          "tajuk": "Menghadap kiblat",
+          "teks": "Disunatkan menghadap kiblat ketika membaca Al-Quran di luar solat, sebagai tanda menghormati kalam Allah, sebagaimana disunatkan dalam majlis-majlis ilmu."
+        },
+        {
+          "tajuk": "Ikhlas dan niat yang baik",
+          "teks": "Niatkan membaca semata-mata kerana Allah, mencari ilmu, keredhaan dan rahmat-Nya, bukan untuk riya' atau menunjuk-nunjuk. Membaca dengan niat yang ikhlas menjadi ibadah yang diberi ganjaran."
+        }
+      ]
+    },
+    {
+      "nama": "Isti'adzah & Basmalah",
+      "penerangan": "Lafaz permulaan membaca: memohon perlindungan Allah daripada syaitan serta memulakan dengan nama Allah.",
+      "senarai": [
+        {
+          "tajuk": "Isti'adzah (memohon perlindungan)",
+          "teks": "Sebelum memulakan bacaan, disunatkan membaca isti'adzah: أَعُوذُ بِاللَّهِ مِنَ الشَّيْطَانِ الرَّجِيمِ (A'udzu billahi minasy-syaitanir-rajim) — \"Aku berlindung dengan Allah daripada syaitan yang direjam.\" Ia dibaca sebelum basmalah pada permulaan tilawah.",
+          "dalil": "Allah berfirman: \"Apabila engkau membaca Al-Quran, maka mintalah perlindungan kepada Allah daripada syaitan yang direjam.\" (An-Nahl 16:98)."
+        },
+        {
+          "tajuk": "Basmalah",
+          "teks": "Disunatkan memulakan bacaan dengan بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ (Bismillahir-rahmanir-rahim) — \"Dengan nama Allah Yang Maha Pemurah lagi Maha Penyayang.\" Ia menyempurnakan isti'adzah dan menetapkan hati pada nama Allah.",
+          "dalil": "Rasulullah SAW memulakan bacaan dengan basmalah; para ulama mensunatkan membacanya pada permulaan setiap surah kecuali Surah At-Taubah (9)."
+        },
+        {
+          "tajuk": "Beberapa variasi lafaz isti'adzah",
+          "teks": "Selain lafaz ringkas di atas, terdapat variasi yang sahih seperti menambah \"وَالسَّمِيعُ الْعَلِيمُ\" (wal-sami'ul-'alim — Allah Maha Mendengar lagi Maha Mengetahui) pada penghujungnya. Kesemuanya dibenarkan, dan yang paling masyhur adalah lafaz ringkas."
+        }
+      ]
+    },
+    {
+      "nama": "Adab Semasa Membaca",
+      "penerangan": "Etika dan tatacara ketika berada di tengah-tengah bacaan Al-Quran.",
+      "senarai": [
+        {
+          "tajuk": "Membaca dengan tartil (beransur-ansur)",
+          "teks": "Disunatkan membaca dengan tartil iaitu perlahan, tenang, jelas makhraj dan tajwidnya, tidak tergesa-gesa. Tartil membolehkan hati memahami dan menghayati makna ayat.",
+          "dalil": "Allah berfirman: \"Dan bacalah Al-Quran itu dengan perlahan-lahan (tartil).\" (Al-Muzzammil 73:4). Aisyah r.a. berkata: Rasulullah SAW membaca dengan tartil sehingga satu surah lebih lama berbanding yang lebih panjang daripadanya."
+        },
+        {
+          "tajuk": "Menghayati dan bertadabbur",
+          "teks": "Merenung dan memahami makna setiap ayat yang dibaca. Apabila melalui ayat rahmat, berdoa memohon rahmat; apabila melalui ayat azab, memohon perlindungan daripada-Nya; apabila melalui ayat tasbih, bertasbih. Ini tanda hati yang hidup.",
+          "dalil": "Allah berfirman: \"Maka tidakkah mereka menghayati Al-Quran? Sekiranya ia daripada selain Allah, nescaya mereka dapati padanya perselisihan yang banyak.\" (An-Nisa' 4:82)."
+        },
+        {
+          "tajuk": "Memperindah suara",
+          "teks": "Disunatkan membaca dengan suara yang baik, merdu dan sedap didengar mengikut hukum tajwid dan tarannum yang tidak melampaui batas. Suara yang baik menjadikan bacaan lebih berkesan dan mendekatkan pendengar.",
+          "dalil": "Rasulullah SAW bersabda: \"Hiasilah Al-Quran dengan suara-suara kamu; sesungguhnya suara yang paling baik ialah suara orang yang baik membaca Al-Quran.\" Dan dalam hadis lain: \"Bukanlah daripada kami sesiapa yang tidak melagukan Al-Quran.\" (Riwayat al-Bukhari)."
+        },
+        {
+          "tajuk": "Bersujud tilawah (sajdah)",
+          "teks": "Apabila melalui mana-mana ayat sajdah (ayat-ayat yang disunatkan sujud), disunatkan melakukan sujud tilwah dengan bertakbir dan berdoa, sebagai tanda tunduk dan patuh kepada perintah Allah dalam ayat tersebut.",
+          "dalil": "Rasulullah SAW bersujud ketika membaca ayat-ayat sajdah, dan Ibnu Umar r.a menceritakan contoh sujud tilawah Nabi SAW (Riwayat al-Bukhari & Muslim)."
+        },
+        {
+          "tajuk": "Mengangkat suara pada tempatnya, merendah pada tempatnya",
+          "teks": "Disunatkan membaca dengan suara yang sederhana — nyaring apabila bermanfaat dan khusyuk (seperti untuk mengajar atau menunjuk bacaan) dan rendah apabila bimbang mengganggu orang lain atau riya'. Tujuannya supaya bacaan tidak mengganggu dan hati tetap khusyuk."
+        }
+      ]
+    },
+    {
+      "nama": "Adab Selepas Membaca",
+      "penerangan": "Cara menghormati mushaf dan menyimpannya, serta etika menutup majlis tilawah.",
+      "senarai": [
+        {
+          "tajuk": "Tidak meletakkan mushaf di tempat yang tidak hormat",
+          "teks": "Mushaf Al-Quran hendaklah diletakkan di tempat yang tinggi, bersih dan mulia, tidak dibiarkan di atas lantai, dihimpit dengan barang lain, atau dibawa ke tempat yang tidak bersih. Ia tertakluk kepada adab menghormati kalam Allah yang mulia."
+        },
+        {
+          "tajuk": "Menutup dengan tasbih (bertaubat dan berdoa)",
+          "teks": "Setelah selesai membaca, disunatkan menutup dengan doa atau tasbih seperti \"Subhanaka\" atau doa khatam (lihat bawah). Membaca selawat dan memohon ampun setelah menamatkan tilawah menyempurnakan adab dan menutup majlis dengan kebaikan."
+        },
+        {
+          "tajuk": "Mengamalkan dan menyampaikan",
+          "teks": "Al-Quran dipegang bukan sekadar untuk dibaca lalu disimpan semula, tetapi untuk difahami dan diamalkan dalam kehidupan. Setelah membaca, renungkan bagaimana ayat-ayat tersebut boleh diaplikasikan dalam akhlak dan amal harian, serta disampaikan kepada orang lain."
+        }
+      ]
+    }
+  ],
+  "doa_khatam": {
+    "tajuk": "Doa Khatam Al-Quran (ringkasan)",
+    "lafaz_arab": "اللَّهُمَّ ارْحَمْنِي بِالْقُرْآنِ وَاجْعَلْهُ لِي إِمَامًا وَنُورًا وَهُدًى وَرَحْمَةً، اللَّهُمَّ ذَكِّرْنِي مِنْهُ مَا نُسِّيتُ وَعَلِّمْنِي مِنْهُ مَا جَهِلْتُ وَارْزُقْنِي تِلَاوَتَهُ آنَاءَ اللَّيْلِ وَأَطْرَافَ النَّهَارِ وَاجْعَلْهُ لِي حُجَّةً يَا رَبَّ الْعَالَمِينَ",
+    "transliterasi": "Allahummarhamni bil-Qur'an, waj'alhu li imaman wa nuran wa hudan wa rahmah. Allahumma dzakkirni minhu ma nusitu wa 'allimni minhu ma jahiltu warzuqni tilawatahu ana-al-laili wa atrafan-nahar, waj'alhu li hujjatan ya rabbal-'alamin.",
+    "makna": "Ya Allah, rahmatilah aku dengan Al-Quran, dan jadikanlah ia bagiku imam (pemimpin), cahaya, petunjuk dan rahmat. Ya Allah, ingatkanlah aku apa yang aku lupa, ajarkanlah aku apa yang aku jahili, kurniakanlah aku membacanya pada waktu malam dan siang, dan jadikanlah ia hujah (pembela) bagiku, wahai Tuhan sekalian alam.",
+    "sumber": "Riwayat Al-Tirmidzi; doa yang masyhur dibaca pada khatam Al-Quran"
+  }
+
+}

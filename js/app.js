@@ -27,6 +27,7 @@ import { renderFast, fastActions } from './features/fast.js';
 import { renderHaid, haidActions } from './features/haid.js';
 import { renderSettings, settingsActions } from './features/settings.js';
 import { renderHelp, helpActions } from './features/help.js';
+import { renderIlmu, ilmuActions, ilmuOnShow } from './features/ilmu.js';
 
 /* ---------- daftar skrin (id + judul topbar) ---------- */
 registerScreen('home', renderHome, { title: null });
@@ -44,6 +45,7 @@ registerScreen('fast', renderFast, { title: 'Puasa' });
 registerScreen('haid', renderHaid, { title: 'Haid' });
 registerScreen('settings', renderSettings, { title: 'Tetapan' });
 registerScreen('help', renderHelp, { title: 'Panduan' });
+registerScreen('ilmu', renderIlmu, { title: 'Ilmu' });
 
 /* ---------- daftar tindakan setiap ciri ---------- */
 registerActions(homeActions);
@@ -58,11 +60,13 @@ registerActions(fastActions);
 registerActions(haidActions);
 registerActions(settingsActions);
 registerActions(helpActions);
+registerActions(ilmuActions);
 
 /* ---------- hook selepas render (timer, carian live) ---------- */
 registerOnShow((v) => v.tab === 'home' && !v.screen, homeOnShow);
 registerOnShow((v) => v.tab === 'quran' && !v.screen, quranOnShow);
 registerOnShow((v) => v.screen === 'surah', quranSurahOnShow);
+registerOnShow((v) => v.screen === 'ilmu', ilmuOnShow);
 
 /* ---------- inisialisasi (kekal API lama: initApp) ---------- */
 export function initApp() {

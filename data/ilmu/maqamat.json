@@ -1,0 +1,116 @@
+{
+  "versi": "1.0",
+  "tajuk": "Tarannum / Maqamat",
+  "penerangan": "Rujukan ringkas seni tarannum Al-Quran — seni melagukan bacaan mengikut maqam-maqam muzik Arab yang masyhur dalam tradisi bacaan di Malaysia, Indonesia, Timur Tengah dan Mesir. Tarannum bukan mengubah bacaan, tetapi menghiasinya dengan lahan (nada) tertentu mengikut maqam.",
+  "konsep_utama": [
+    "Tarannum = seni melagukan bacaan al-Quran dengan suara yang indah tanpa melanggar hukum tajwid.",
+    "Maqam = skala / kerangka nada dalam muzik Arab yang menjadi asas lagu bacaan.",
+    "Setiap maqam mempunyai perasaan tersendiri; qari yang mahir berpindah antara maqam (maqam-mawadda' / taksir) mengikut suasana ayat.",
+    "Membaca dengan tartil dan bertarannum digalakkan; Rasulullah SAW bersabda yang bermaksud: 'Hiasilah al-Quran dengan suara-suara kamu' (HR Abu Dawud)."
+  ],
+  "maqamat_utama": [
+    {
+      "no": 1,
+      "nama": "Bayati",
+      "ejaan_lain": "Bayyati / Bayātī",
+      "watak": "Tenang, lembut, sedih tetapi sederhana",
+      "gaya": "Sering menjadi maqam pembuka bacaan. Nada naik secara beransur-ansur.",
+      "bahagian_ayat": "Biasanya untuk ayat-ayat berita, penegasan, dan permulaan surah.",
+      "contoh_penggunaan": "Al-Fatihah, permulaan surah-surah."
+    },
+    {
+      "no": 2,
+      "nama": "Sika / Sikah",
+      "ejaan_lain": "Sīkāh",
+      "watak": "Anggun, mulia, agung",
+      "gaya": "Nada istimewa yang memberikan rasa ketinggian dan keagungan.",
+      "bahagian_ayat": "Ayat-ayat yang menceritakan keagungan Allah, syurga dan nikmat.",
+      "contoh_penggunaan": "Surah Ar-Rahman, ayat-ayat nikmat syurga."
+    },
+    {
+      "no": 3,
+      "nama": "Hijaz",
+      "ejaan_lain": "Ḥijāz",
+      "watak": "Sedih, mendayu-dayu, haru",
+      "gaya": "Mengandungi jarak nada yang menghasilkan rasa sedih dan keharuan.",
+      "bahagian_ayat": "Ayat-ayat azab, peringatan, kisah umat terdahulu, dan hari kiamat.",
+      "contoh_penggunaan": "Ayat-ayat tentang neraka dan peringatan."
+    },
+    {
+      "no": 4,
+      "nama": "Rast",
+      "ejaan_lain": "Rāst / Rast",
+      "watak": "Ceria, tegak, tegas, yakin",
+      "gaya": "Nada paling asas dan 'lurus'; memberi rasa kestabilan dan keyakinan.",
+      "bahagian_ayat": "Ayat-ayat perintah, hukum, dan penegasan akidah.",
+      "contoh_penggunaan": "Ayat-ayat hukum dan perintah."
+    },
+    {
+      "no": 5,
+      "nama": "Nahawand",
+      "ejaan_lain": "Nahāwand",
+      "watak": "Sedih, halus, lembut, khusyuk",
+      "gaya": "Nada melankolik yang sangat lembut; sering untuk munajat dan doa.",
+      "bahagian_ayat": "Ayat-ayat doa, permohonan, dan penyerahan diri.",
+      "contoh_penggunaan": "Doa-doa para nabi dan ayat permohonan."
+    },
+    {
+      "no": 6,
+      "nama": "Jiharkah / Jaharkah",
+      "ejaan_lain": "Jihārkāh",
+      "watak": "Sedih, mendalam, penuh perasaan",
+      "gaya": "Berpindah daripada maqam lain (biasanya daripada Bayati); sangat mendayu.",
+      "bahagian_ayat": "Ayat-ayat kesedihan, ratapan, dan penderitaan.",
+      "contoh_penggunaan": "Kisah Nabi Ya'qub kehilangan Nabi Yusuf."
+    },
+    {
+      "no": 7,
+      "nama": "Kurd",
+      "ejaan_lain": "Kurd / Kūrd",
+      "watak": "Riang, bersahaja, dinamik",
+      "gaya": "Nada yang agak ceria dan ringan.",
+      "bahagian_ayat": "Ayat-ayat berita gembira dan kegembiraan.",
+      "contoh_penggunaan": "Berita kemenangan dan kabar gembira."
+    },
+    {
+      "no": 8,
+      "nama": "Sabah",
+      "ejaan_lain": "Ṣabā",
+      "watak": "Sedih, pilu, penuh rindu",
+      "gaya": "Nada pilu yang sangat menusuk jiwa; sering untuk ayat yang menyentuh hati.",
+      "bahagian_ayat": "Ayat-ayat peringatan dan kelembutan.",
+      "contoh_penggunaan": "Ayat-ayat yang menyentuh perasaan."
+    },
+    {
+      "no": 9,
+      "nama": "Nawa'athir / Nawa Athar",
+      "ejaan_lain": "Nawā'āthar",
+      "watak": "Tegas, berkuasa, agung",
+      "gaya": "Maqam tambahan yang sering digunakan pada penghujung bacaan atau untuk penutup.",
+      "bahagian_ayat": "Ayat-ayat penegasan dan penutup surah.",
+      "contoh_penggunaan": "Penutup bacaan."
+    },
+    {
+      "no": 10,
+      "nama": "Zanjiran",
+      "ejaan_lain": "Zanjīrān",
+      "watak": "Sedih, teratur, berlagu berantai",
+      "gaya": "Nada yang mengalir seperti rantai; menggabungkan beberapa maqam.",
+      "bahagian_ayat": "Ayat-ayat yang panjang dan berturut-turut.",
+      "contoh_penggunaan": "Surah-surah panjang."
+    }
+  ],
+  "nota_gaya_malaysia": [
+    "Di Malaysia, tarannum diajar secara formal dalam pendidikan sekolah agama dan pondok.",
+    "Gaya bacaan (gaya) lazim: Bayati, Sika, Hijaz, Rast, Nahawand, dan Jiharkah sebagai asas.",
+    "Tilawah peringkat antarabangsa menggunakan peralihan maqam mengikut makna ayat (tarannum mawaddi').",
+    "Audio rujukan bagi maqam boleh didengar melalui rakaman qari terkenal; aplikasi ini memuatkan audio bacaan ayat (bacaan berlagu) sebagai rujukan praktikal."
+  ],
+  "qari_rujukan": [
+    "Abdul Rahman Al-Sudais",
+    "Mishari Rashid Al-Afasy",
+    "Sa'ud Al-Shuraim",
+    "Abdul Basit Abdus Samad",
+    "Maher Al-Muaiqly"
+  ]
+}

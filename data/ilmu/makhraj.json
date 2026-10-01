@@ -1,0 +1,132 @@
+{
+  "versi": "1.0",
+  "penerangan": "Makhraj Huruf — tempat keluar huruf. Dibahagi kepada 5 kawasan umum dan 17 makhraj khusus (mengikut pandangan Imam Ibn al-Jazari).",
+  "umum": [
+    { "nama": "Al-Jauf", "melayu": "Rongga mulut dan kerongkong", "huruf": "ا و ي (huruf mad)" },
+    { "nama": "Al-Halq", "melayu": "Kerongkong", "huruf": "ء ه ع ح غ خ" },
+    { "nama": "Al-Lisan", "melayu": "Lidah", "huruf": "18 huruf" },
+    { "nama": "Asy-Syafatain", "melayu": "Dua bibir", "huruf": "ف و ب م" },
+    { "nama": "Al-Khaisyum", "melayu": "Rongga hidung", "huruf": "ghunnah (م ن bertasydid)" }
+  ],
+  "khusus": [
+    {
+      "no": 1,
+      "nama": "Al-Jauf",
+      "melayu": "Rongga mulut dan kerongkong",
+      "huruf": "ا و ي (huruf mad & lein)",
+      "penerangan": "Huruf mad keluar dari rongga mulut dan kerongkong tanpa bertembung dengan mana-mana anggota."
+    },
+    {
+      "no": 2,
+      "nama": "Aqsa al-Halq",
+      "melayu": "Kerongkong paling dalam",
+      "huruf": "ء هـ",
+      "penerangan": "Hamzah dan Ha' keluar dari bahagian kerongkong yang paling dalam (paling dekat dengan dada)."
+    },
+    {
+      "no": 3,
+      "nama": "Wasat al-Halq",
+      "melayu": "Kerongkong tengah",
+      "huruf": "ع ح",
+      "penerangan": "'Ain dan Ha' keluar dari bahagian tengah kerongkong."
+    },
+    {
+      "no": 4,
+      "nama": "Adna al-Halq",
+      "melayu": "Kerongkong paling atas (hujung)",
+      "huruf": "غ خ",
+      "penerangan": "Ghoin dan Kho' keluar dari bahagian kerongkong yang paling atas (paling dekat dengan mulut)."
+    },
+    {
+      "no": 5,
+      "nama": "Aqsa al-Lisan",
+      "melayu": "Pangkal lidah (paling dalam)",
+      "huruf": "ق",
+      "penerangan": "Qaf keluar dari pangkal lidah (paling dalam) bertemu dengan lelangit atas."
+    },
+    {
+      "no": 6,
+      "nama": "Adna al-Lisan",
+      "melayu": "Lidah sedikit ke hadapan dari pangkal",
+      "huruf": "ك",
+      "penerangan": "Kaf keluar dari lidah sedikit ke hadapan berbanding makhraj Qaf."
+    },
+    {
+      "no": 7,
+      "nama": "Wasat al-Lisan",
+      "melayu": "Tengah lidah",
+      "huruf": "ج ش ي",
+      "penerangan": "Jim, Syin dan Ya' (bukan mad) keluar dari bahagian tengah lidah bertemu lelangit."
+    },
+    {
+      "no": 8,
+      "nama": "Hafat al-Lisan",
+      "melayu": "Tepi lidah",
+      "huruf": "ض",
+      "penerangan": "Dhad keluar dari tepi lidah bertemu dengan geraham atas."
+    },
+    {
+      "no": 9,
+      "nama": "Tarf al-Lisan (Lelaan)",
+      "melayu": "Hujung lidah di tepi",
+      "huruf": "ل",
+      "penerangan": "Lam keluar dari hujung lidah di tepi, bertemu dengan gusi hadapan atas."
+    },
+    {
+      "no": 10,
+      "nama": "Tarf al-Lisan (Nun)",
+      "melayu": "Hujung lidah di tengah",
+      "huruf": "ن",
+      "penerangan": "Nun keluar dari hujung lidah di tengah bertemu dengan gusi hadapan atas (dengan ghunnah)."
+    },
+    {
+      "no": 11,
+      "nama": "Tarf al-Lisan (Ra)",
+      "melayu": "Hujung lidah di tengah (sikit ke belakang)",
+      "huruf": "ر",
+      "penerangan": "Ra keluar dari hujung lidah berdekatan makhraj Nun, dengan sedikit tarikan ke belakang."
+    },
+    {
+      "no": 12,
+      "nama": "Tarf al-Lisan (Leen)",
+      "melayu": "Hujung lidah & pangkal gigi kacip atas",
+      "huruf": "ط د ت",
+      "penerangan": "Tha', Dal dan Ta' keluar dari hujung lidah bertemu dengan pangkal gigi kacip atas."
+    },
+    {
+      "no": 13,
+      "nama": "Tarf al-Lisan (Safeer)",
+      "melayu": "Hujung lidah & tengah gigi kacip atas",
+      "huruf": "ص ز س",
+      "penerangan": "Sad, Zay dan Sin keluar dari hujung lidah bertemu dengan tengah gigi kacip atas (huruf safeer)."
+    },
+    {
+      "no": 14,
+      "nama": "Tarf al-Lisan (Taraf)",
+      "melayu": "Hujung lidah & hujung gigi kacip atas/bawah",
+      "huruf": "ظ ذ ث",
+      "penerangan": "Dha, Zal dan Tsa keluar dari hujung lidah bertemu dengan hujung gigi kacip atas (atau bawah)."
+    },
+    {
+      "no": 15,
+      "nama": "Batin asy-Syafah as-Sufla",
+      "melayu": "Bahagian dalam bibir bawah",
+      "huruf": "ف",
+      "penerangan": "Fa' keluar dari bahagian dalam bibir bawah bertemu dengan hujung gigi kacip atas."
+    },
+    {
+      "no": 16,
+      "nama": "Asy-Syafatain",
+      "melayu": "Dua bibir",
+      "huruf": "و ب م",
+      "penerangan": "Wau (bukan mad), Ba' dan Mim keluar dari pertemuan dua bibir."
+    },
+    {
+      "no": 17,
+      "nama": "Al-Khaisyum",
+      "melayu": "Rongga hidung",
+      "huruf": "ghunnah (م ن bertasydid & nun sakinah untuk idgham/ikhfa)",
+      "penerangan": "Ghunnah keluar dari rongga hidung. Terdapat pada nun dan mim yang bertasydid, nun sakinah, dan tanwin."
+    }
+  ]
+}

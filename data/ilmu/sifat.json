@@ -1,0 +1,51 @@
+{
+  "versi": "1.0",
+  "penerangan": "Sifat Huruf — sifat yang melekat pada huruf ketika dikeluarkan. Terbahagi kepada sifat berlawanan (lazimah mutadhadah) dan sifat tunggal (lazimah ghair mutadhadah).",
+  "berlawanan": [
+    { "nama": "Jahr", "lawan": "Hams", "huruf": "Jahr: ب ج د ذ ر ض ط ظ ع غ ق ل م ن و ا ى", "penerangan": "Terhentinya aliran nafas ketika menyebut huruf. Lawan: Hams (berterusan nafas)." },
+    { "nama": "Syiddah", "lawan": "Rakhawah", "huruf": "Syiddah: أ ج د ق ط ب ك ; Rakhawah: ف ح ث ذ ز س ش ص ض ظ غ خ", "penerangan": "Terhentinya aliran suara ketika menyebut huruf. Di antara keduanya ada Tawassut (ح ع ر ل م ن)." },
+    { "nama": "Isti'la'", "lawan": "Istifal", "huruf": "Isti'la': خ ص ض ط ظ غ ق ; Istifal: selebihnya", "penerangan": "Terangkatnya lidah ke lelangit. Lawan: Istifal (lidah turun ke bawah). Huruf Isti'la' ialah huruf tafkhim." },
+    { "nama": "Itbaq", "lawan": "Infitah", "huruf": "Itbaq: ص ض ط ظ ; Infitah: selebihnya", "penerangan": "Terangkat dan melekatnya lidah pada lelangit atas. Lawan: Infitah (lidah terbuka)." },
+    { "nama": "Izlaq", "lawan": "Ismat", "huruf": "Izlaq: ف ر م ن ل ب ; Ismat: selebihnya", "penerangan": "Ringan dan lancar keluar dari hujung lidah/bibir. Lawan: Ismat (tertahan, huruf tidak suka jatuh pada wazan 4 huruf)." }
+  ],
+  "tunggal": [
+    { "nama": "Qalqalah", "huruf": "ق ط ب ج د", "penerangan": "Gegaran suara pada huruf bersukun. Terbahagi: Qalqalah Sughra (di tengah kalimah) & Qalqalah Kubra (di hujung kalimah)." },
+    { "nama": "Safir", "huruf": "ص ز س", "penerangan": "Bunyi siulan/desis. Juga disebut huruf safir." },
+    { "nama": "Lin", "huruf": "ي و (huruf lein)", "penerangan": "Lembut dan mudah diucapkan; huruf wau dan ya' bersukun selepas fathah." },
+    { "nama": "Inhiraf", "huruf": "ل ر", "penerangan": "Pembelokan suara, suara condong keluar dari makhraj." },
+    { "nama": "Takrir", "huruf": "ر", "penerangan": "Getaran hujung lidah; disarankan berhati-hati agar tidak berlebihan." },
+    { "nama": "Tafasy-syi", "huruf": "ش", "penerangan": "Penyerakan suara/angin dalam mulut ketika menyebut huruf syin." },
+    { "nama": "Istithalah", "huruf": "ض", "penerangan": "Pemanjangan suara dari awal tepi lidah hingga hujungnya." }
+  ],
+  "huruf": [
+    { "huruf": "ء", "nama": "Hamzah", "sifat": ["Jahr", "Syiddah", "Istifal", "Infitah", "Ismat"] },
+    { "huruf": "ب", "nama": "Ba", "sifat": ["Jahr", "Syiddah", "Istifal", "Infitah", "Izlaq", "Qalqalah"] },
+    { "huruf": "ت", "nama": "Ta", "sifat": ["Hams", "Syiddah", "Istifal", "Infitah", "Ismat"] },
+    { "huruf": "ث", "nama": "Tsa", "sifat": ["Hams", "Rakhawah", "Istifal", "Infitah", "Izlaq"] },
+    { "huruf": "ج", "nama": "Jim", "sifat": ["Jahr", "Syiddah", "Istifal", "Infitah", "Izlaq", "Qalqalah"] },
+    { "huruf": "ح", "nama": "Ha", "sifat": ["Hams", "Rakhawah", "Istifal", "Infitah", "Ismat"] },
+    { "huruf": "خ", "nama": "Kha", "sifat": ["Hams", "Rakhawah", "Isti'la'", "Infitah", "Ismat"] },
+    { "huruf": "د", "nama": "Dal", "sifat": ["Jahr", "Syiddah", "Istifal", "Infitah", "Izlaq", "Qalqalah"] },
+    { "huruf": "ذ", "nama": "Zal", "sifat": ["Jahr", "Rakhawah", "Istifal", "Infitah", "Izlaq"] },
+    { "huruf": "ر", "nama": "Ra", "sifat": ["Jahr", "Tawassut", "Isti'la'", "Infitah", "Izlaq", "Inhiraf", "Takrir"] },
+    { "huruf": "ز", "nama": "Zay", "sifat": ["Jahr", "Rakhawah", "Istifal", "Infitah", "Izlaq", "Safir"] },
+    { "huruf": "س", "nama": "Sin", "sifat": ["Hams", "Rakhawah", "Istifal", "Infitah", "Izlaq", "Safir"] },
+    { "huruf": "ش", "nama": "Syin", "sifat": ["Hams", "Rakhawah", "Istifal", "Infitah", "Izlaq", "Tafasy-syi"] },
+    { "huruf": "ص", "nama": "Sad", "sifat": ["Hams", "Rakhawah", "Isti'la'", "Itbaq", "Ismat", "Safir"] },
+    { "huruf": "ض", "nama": "Dhad", "sifat": ["Jahr", "Rakhawah", "Isti'la'", "Itbaq", "Ismat", "Istithalah"] },
+    { "huruf": "ط", "nama": "Tha", "sifat": ["Jahr", "Syiddah", "Isti'la'", "Itbaq", "Ismat", "Qalqalah"] },
+    { "huruf": "ظ", "nama": "Dha", "sifat": ["Jahr", "Rakhawah", "Isti'la'", "Itbaq", "Izlaq"] },
+    { "huruf": "ع", "nama": "Ain", "sifat": ["Jahr", "Tawassut", "Istifal", "Infitah", "Ismat"] },
+    { "huruf": "غ", "nama": "Ghoin", "sifat": ["Jahr", "Rakhawah", "Isti'la'", "Infitah", "Ismat"] },
+    { "huruf": "ف", "nama": "Fa", "sifat": ["Hams", "Rakhawah", "Istifal", "Infitah", "Izlaq"] },
+    { "huruf": "ق", "nama": "Qaf", "sifat": ["Jahr", "Syiddah", "Isti'la'", "Infitah", "Ismat", "Qalqalah"] },
+    { "huruf": "ك", "nama": "Kaf", "sifat": ["Hams", "Syiddah", "Istifal", "Infitah", "Ismat"] },
+    { "huruf": "ل", "nama": "Lam", "sifat": ["Jahr", "Tawassut", "Istifal", "Infitah", "Izlaq", "Inhiraf"] },
+    { "huruf": "م", "nama": "Mim", "sifat": ["Jahr", "Tawassut", "Istifal", "Infitah", "Izlaq"] },
+    { "huruf": "ن", "nama": "Nun", "sifat": ["Jahr", "Tawassut", "Istifal", "Infitah", "Izlaq"] },
+    { "huruf": "ه", "nama": "Ha", "sifat": ["Hams", "Rakhawah", "Istifal", "Infitah", "Ismat"] },
+    { "huruf": "و", "nama": "Wau", "sifat": ["Jahr", "Rakhawah", "Istifal", "Infitah", "Izlaq", "Lin"] },
+    { "huruf": "ي", "nama": "Ya", "sifat": ["Jahr", "Rakhawah", "Istifal", "Infitah", "Izlaq", "Lin"] }
+  ],
+  "catatan": "Tawassut (sederhana) ialah keadaan di antara Syiddah dan Rakhawah pada huruf ح ع ر ل م ن. Ghunnah bukan sifat tunggal huruf tetapi sifat bunyi pada nun & mim berserta dengung di rongga hidung."
+}

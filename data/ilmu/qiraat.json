@@ -1,0 +1,140 @@
+{
+  "versi": "1.0",
+  "tajuk": "Qiraat Tujuh dan Sepuluh",
+  "penerangan": "Rujukan ringkas mengenai Qiraat al-Quran — bacaan-bacaan sahih yang diriwayatkan daripada Rasulullah SAW. Qiraat Tujuh (al-Qira'at al-Sab') dinisbahkan kepada tujuh Imam; Qiraat Sepuluh (al-'Ashr) menambah tiga imam lagi. Setiap imam pula mempunyai dua orang perawi utama.",
+  "konsep_utama": [
+    "Qiraat bermaksud sesuatu bacaan atau cara bacaan Al-Quran yang diriwayatkan secara mutawatir daripada Rasulullah SAW.",
+    "Perbezaan qiraat mencakupi aspek bahasa (huruf, harakat, mad, waqaf) dan tidak mengubah makna asas ayat.",
+    "Tulisan mushaf (Rasm Uthmani) menampung perbezaan qiraat melalui titik dan baris."
+  ],
+  "qiraat_tujuh": [
+    {
+      "no": 1,
+      "imam": "Nafi' al-Madani",
+      "nama_penuh": "Nafi' bin Abdur Rahman bin Abu Nu'aim al-Madani",
+      "tahun_wafat": "169H",
+      "negeri": "Madinah",
+      "perawi": [
+        { "nama": "Qalun", "nama_penuh": "Abu Musa 'Isa bin Mina al-Qalun", "tahun_wafat": "220H" },
+        { "nama": "Warsh", "nama_penuh": "Uthman bin Sa'id al-Qibti (Warsh)", "tahun_wafat": "197H" }
+      ],
+      "ciri": "Mad panjang, tarqiq (nipis) dan tafkhim tertentu, bacaan lebih lembut."
+    },
+    {
+      "no": 2,
+      "imam": "Ibn Kathir al-Makki",
+      "nama_penuh": "Abdullah bin Kathir al-Dari al-Makki",
+      "tahun_wafat": "120H",
+      "negeri": "Makkah",
+      "perawi": [
+        { "nama": "Al-Bazzi", "nama_penuh": "Ahmad bin Muhammad bin Abdullah al-Bazzi", "tahun_wafat": "250H" },
+        { "nama": "Qunbul", "nama_penuh": "Muhammad bin Abdur Rahman al-Makki (Qunbul)", "tahun_wafat": "291H" }
+      ],
+      "ciri": "Terdapat isymam, idgham kabir, dan mad tertentu."
+    },
+    {
+      "no": 3,
+      "imam": "Abu 'Amr al-Basri",
+      "nama_penuh": "Zabban bin al-'Ala' al-Mazini al-Basri",
+      "tahun_wafat": "154H",
+      "negeri": "Basrah",
+      "perawi": [
+        { "nama": "Al-Duri", "nama_penuh": "Hafs bin Umar bin Abdul Aziz al-Duri", "tahun_wafat": "246H" },
+        { "nama": "Al-Susi", "nama_penuh": "Sulaiman bin al-Hakam al-Susi", "tahun_wafat": "261H" }
+      ],
+      "ciri": "Idgham kabir (idgham besar) banyak berlaku."
+    },
+    {
+      "no": 4,
+      "imam": "Ibn 'Amir al-Syami",
+      "nama_penuh": "Abdullah bin 'Amir al-Yahsubi al-Syami",
+      "tahun_wafat": "118H",
+      "negeri": "Syam (Damsyik)",
+      "perawi": [
+        { "nama": "Hisham", "nama_penuh": "Hisham bin 'Ammar al-Dimasyqi", "tahun_wafat": "245H" },
+        { "nama": "Ibn Dhakwan", "nama_penuh": "Abdullah bin Ahmad al-Qurasyi (Ibn Dhakwan)", "tahun_wafat": "242H" }
+      ],
+      "ciri": "Beberapa isymam dan imalah tertentu."
+    },
+    {
+      "no": 5,
+      "imam": "'Asim al-Kufi",
+      "nama_penuh": "'Asim bin Abi al-Najud al-Asadi al-Kufi",
+      "tahun_wafat": "127H",
+      "negeri": "Kufah",
+      "perawi": [
+        { "nama": "Syu'bah", "nama_penuh": "Syu'bah bin Ayyasy bin Salim al-Kufi", "tahun_wafat": "193H" },
+        { "nama": "Hafs", "nama_penuh": "Hafs bin Sulaiman bin al-Mughirah al-Kufi", "tahun_wafat": "180H" }
+      ],
+      "ciri": "Bacaan Hafs ialah bacaan paling meluas di dunia hari ini, termasuk Malaysia & Indonesia."
+    },
+    {
+      "no": 6,
+      "imam": "Hamzah al-Kufi",
+      "nama_penuh": "Hamzah bin Habib bin 'Imarah al-Zayyat al-Kufi",
+      "tahun_wafat": "156H",
+      "negeri": "Kufah",
+      "perawi": [
+        { "nama": "Khalaf", "nama_penuh": "Khalaf bin Hisham al-Bazzar", "tahun_wafat": "229H" },
+        { "nama": "Khallad", "nama_penuh": "Khallad bin Khalid al-Syairazi", "tahun_wafat": "220H" }
+      ],
+      "ciri": "Mad panjang ekstrem (mad musyba'), banyak idgham."
+    },
+    {
+      "no": 7,
+      "imam": "Al-Kisa'i al-Kufi",
+      "nama_penuh": "Ali bin Hamzah bin Abdullah al-Kisa'i",
+      "tahun_wafat": "189H",
+      "negeri": "Kufah",
+      "perawi": [
+        { "nama": "Al-Lays", "nama_penuh": "Al-Lays bin Khalid al-Baghdadi", "tahun_wafat": "240H" },
+        { "nama": "Al-Duri", "nama_penuh": "Hafs bin Umar al-Duri (perawi bersama Abu 'Amr)", "tahun_wafat": "246H" }
+      ],
+      "ciri": "Banyak imalah, bacaan dengan tahqiq."
+    }
+  ],
+  "qiraat_sepuluh_tambahan": [
+    {
+      "no": 8,
+      "imam": "Abu Ja'far al-Madani",
+      "nama_penuh": "Yazid bin al-Qa'qa' al-Makhzumi al-Madani",
+      "tahun_wafat": "130H",
+      "negeri": "Madinah",
+      "perawi": [
+        { "nama": "Ibn Wardan", "nama_penuh": "Isa bin Wardan al-Madani", "tahun_wafat": "160H" },
+        { "nama": "Ibn Jammaz", "nama_penuh": "Sulaiman bin Muslim bin Jammaz", "tahun_wafat": "170H" }
+      ],
+      "ciri": "Peringkat pertama daripada tiga imam tambahan (qiraat sepuluh)."
+    },
+    {
+      "no": 9,
+      "imam": "Ya'qub al-Basri",
+      "nama_penuh": "Ya'qub bin Ishaq al-Hadrami al-Basri",
+      "tahun_wafat": "205H",
+      "negeri": "Basrah",
+      "perawi": [
+        { "nama": "Ruways", "nama_penuh": "Muhammad bin al-Mutawakkil al-Basri (Ruways)", "tahun_wafat": "238H" },
+        { "nama": "Rauh", "nama_penuh": "Rauh bin Abdul Mu'min al-Basri", "tahun_wafat": "234H" }
+      ],
+      "ciri": "Peringkat kedua qiraat sepuluh."
+    },
+    {
+      "no": 10,
+      "imam": "Khalaf al-'Asyir",
+      "nama_penuh": "Khalaf bin Hisham al-Bazzar",
+      "tahun_wafat": "229H",
+      "negeri": "Baghdad",
+      "perawi": [
+        { "nama": "Ishak", "nama_penuh": "Ishak bin Ibrahim al-Warraq", "tahun_wafat": "286H" },
+        { "nama": "Idris", "nama_penuh": "Idris bin Abdul Karim al-Haddad", "tahun_wafat": "292H" }
+      ],
+      "ciri": "Khalaf ialah perawi Hamzah dan juga imam kesepuluh (qiraat sepuluh)."
+    }
+  ],
+  "peringkat_qiraat": [
+    { "peringkat": "Mutawatir", "bilangan": "7 qiraat", "keterangan": "Diriwayatkan oleh ramai perawi pada setiap peringkat sehingga mustahil berlaku persepakatan dusta." },
+    { "peringkat": "Masyhur", "bilangan": "3 qiraat tambahan", "keterangan": "Sanad sahih tetapi bilangan perawi tidak sampai darjat mutawatir; tetap dianggap sah." },
+    { "peringkat": "Ahad / Syaz", "bilangan": "Lain-lain", "keterangan": "Sanad sahih tetapi tidak menepati rasm mushaf atau bahasa Arab yang sahih." }
+  ],
+  "kaedah_tarannum": "Lihat data/maqamat.json — tarannum merujuk seni melagukan bacaan (lahan) yang dilandaskan pada maqam-maqam muzik Arab."
+}
