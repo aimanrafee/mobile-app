@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Offline — Taubat.App</title>
+  <link rel="stylesheet" href="./css/app.css">
+  <style>
+    body {
+      display: grid;
+      place-items: center;
+      min-height: 100dvh;
+      text-align: center;
+      padding: 2rem;
+    }
+    .offline-box {
+      max-width: 320px;
+    }
+    .offline-box h1 {
+      font-size: 1.4rem;
+      margin-bottom: .5rem;
+    }
+    .offline-box p {
+      color: var(--muted);
+      font-size: .9rem;
+      line-height: 1.6;
+    }
+    .offline-box button {
+      margin-top: 1.5rem;
+      padding: .75rem 1.5rem;
+      border-radius: 999px;
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      font-size: .9rem;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="offline-box">
+    <h1>📡 Tiada Sambungan</h1>
+    <p>Taubat.App memerlukan sambungan internet untuk memuat data pertama kali. Selepas itu, ia boleh digunakan secara offline.</p>
+    <button onclick="location.reload()">Cuba Semula</button>
+  </div>
+</body>
+</html>
